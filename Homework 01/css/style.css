@@ -1,3 +1,22 @@
+body {
+	font-family: sans-serif;	
+    width: 1024px;
+    height: 1024px;
+    background-color: #F3F3F3;
+    margin: 0 auto;	
+}
+
+hr {
+	border-top: 1px solid #c4c4ca;
+}
+
+h3 {
+	
+}
+
+.padding {
+	padding-left: 20px;
+}
 
 #wrapper {
 	max-width: 500px;
@@ -9,14 +28,14 @@
 	text-transform: uppercase;
 }
 
-hr {
-	border-top: 2px solid #c4c4ca;
+#image {
+	display: block;
+	width: 300px;
+	margin-left: auto;
+    margin-right: auto
 }
 
-body {
-	font-family: Arial;	
-    width: 1024px;
-    height: 1024px;
-    background-color: #F3F3F3;
-    margin: 0 auto;	
+.center {
+	text-align: center;
 }
+
