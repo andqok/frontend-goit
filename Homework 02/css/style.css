@@ -1,0 +1,49 @@
+input {
+	margin:10px;
+}
+
+.content {
+	margin: 15px;
+	width: 500px;
+	float: left;
+}
+
+p {
+	display: inline-block;
+}
+
+input[type=submit] {
+	background-color: yellow;
+}
+
+time {
+	font-weight: bold;
+}
+
+nav {
+	float: left;
+	width: 180px;
+}
+
+footer {
+	text-align: center;
+	background: none repeat scroll 0 0 beige;
+}
+
+img {
+	height: auto;
+	width: 100%;
+	margin: 20px 0 0;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+
+li {
+	background-color: beige;
+	display: block;
+	margin: 5px 0;
+}
+
+ul {
+	margin: 10px;
+}
