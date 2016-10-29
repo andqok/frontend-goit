@@ -1,0 +1,95 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+
+html, body {
+    height:100%; /* Пришлось так писать, чтоб потом задать центральный div на всю длину страницы 100%*/
+}
+
+
+body {
+	background-color: #f9f9f9;
+}
+
+li {
+	list-style-type: none;
+}
+
+h1 {
+	padding-left: 46px;
+	padding-top: 50px;
+	margin: 0px;
+}
+
+a {
+	color: #000;
+}
+
+.wrapper {
+	width: 1060px;
+	min-height: 100%;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.menu ul li {  
+	padding-left: 46px;
+    display: inline-block;
+    color: #E9E9E9;
+    margin-top: 15px;
+    margin-bottom: 15px; 
+}
+
+.sidebar {
+	float: left;
+	display: inline;
+	width: 240px;
+	height: auto;
+}
+
+.sidebar ul {
+	padding-left: 46px;
+}
+
+.sidebar ul li {
+	border: 1px gray solid;
+	display: block;
+	height: 35px;
+}
+
+.sidebar ul li a {
+	display: block;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.sidebar ul li a:hover {
+	margin-left: 40px;
+}
+
+.content {
+	display: block;
+	float: left;
+	width: 800px;
+	height: auto;
+}
+
+.text {
+	padding: 20px;
+}
+
+.footer ul li {
+	clear: both;
+	float: bottom;
+	display: inline-block;
+	height: auto;
+	padding: 10px;
+}
+
+.footer ul li:last-child {
+	float:right;
+}
