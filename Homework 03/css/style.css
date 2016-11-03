@@ -36,6 +36,13 @@ a {
 	background-color: #fff;
 }
 
+.menu {
+	background: linear-gradient(to bottom, #5e5e5e, #444343);
+	margin-top: 40px;
+	margin-bottom: 40px;
+	height: 40px;
+}
+
 .menu ul li {  
 	padding-left: 46px;
     display: inline-block;
@@ -52,11 +59,14 @@ a {
 }
 
 .sidebar ul {
-	padding-left: 46px;
+	margin-left: 46px;
+	border-left: 1px gray solid;
+	border-right: 1px gray solid;
+	border-bottom: 1px gray solid;	
 }
 
 .sidebar ul li {
-	border: 1px gray solid;
+	border-top: 1px gray solid;
 	display: block;
 	height: 35px;
 }
@@ -76,15 +86,25 @@ a {
 	float: left;
 	width: 800px;
 	height: auto;
+	position: relative;
+}
+
+.content img {
+	overflow: auto;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0;
 }
 
 .text {
 	padding: 20px;
 }
 
-.footer ul li {
+.footer {
 	clear: both;
-	float: bottom;
+}
+
+.footer ul li {
+	float: left;
 	display: inline-block;
 	height: auto;
 	padding: 10px;
