@@ -12,6 +12,7 @@ html, body {
   height: 1028px;
   width: 1215px;
   background-image: url(../img/bg.png);
+  background-size: 100%;
   margin: 0 auto;
   font-family: 'Tahoma Regular';
   font-size: 14px;
@@ -26,20 +27,20 @@ html, body {
 
 .underline {
 	text-decoration: underline;
+	display: inline;
 }
 
-h2 {
-	font-size: 24px;
+.title {
+	font-size: 15px;
+	color: white;
 }
 
 ul {
-	padding-right: 20px;
 	text-align: right;
 }
 
 li {
 	display: inline-block;
-
 	height: 35px;
 	vertical-align: middle;
 }
@@ -50,8 +51,8 @@ li:hover {
 	color: white;
 }
 
-a {
-	display: inline-block;
+.top-bar__a {
+	display: block;
 	height: 100%;
 	color: #60b5ed;
 	text-decoration: none;
@@ -64,8 +65,8 @@ a:hover {
 	color: white;
 }
 
-.register:hover {
-	border: lolid 1 px #e68e16;
+.register {
+	border: 1px solid #e68e16;
 	background-image: linear-gradient(to top, rgba(0,0,0,.3) 20%, rgba(255, 255, 255, .3));
 	color: white;
 }
@@ -94,3 +95,16 @@ a:hover {
     text-align: center;
 }
 
+input {
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.M {
+	width: 100px;
+}
+
+.O {
+	width: 192px;
+}

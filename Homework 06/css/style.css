@@ -1,0 +1,33 @@
+#main_container {
+ width: 400px;
+ margin: 20px auto;
+ border: 2px solid #cccccc;
+ padding: 5px;
+ overflow: auto;
+}
+
+.floated_box {
+ float: left;
+ width: 100px;
+ height: 100px;
+ border: 1px solid #990000;
+ margin: 10px;
+}
+/*
+.float_right {
+	float: right;
+	width: 200px;
+	height: 200px;
+	background-color: beige;
+	margin: 10px;
+}
+
+.float_left {
+	float: right;
+	width: 200px;
+	height: 200px;
+	background-color: beige;
+	margin: 10px;
+	clear: right;
+}
+*/

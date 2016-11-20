@@ -1,6 +1,8 @@
 * {
 	margin: 0;
 	padding: 0;
+	list-style-type: none;
+	text-decoration: none;
 }
 
 body {
@@ -67,9 +69,15 @@ section .section_content {
 .logo {
 	position: absolute;
 	float: left;
-	padding-left: 12px;
+	padding-left: 25px;
 	margin-top: 10px;
 	height: 177px;
+}
+
+.trips_asia {
+	position: absolute;
+	padding-top: 110px;
+	padding-left: 100px;
 }
 
 .contacts {
@@ -89,17 +97,18 @@ section .section_content {
 }
 
 .countries {
+	display: flex;
+	height: 65px;
 	float: right;
-	margin-top: 15px;
-	margin-right: 15px;
-	margin-left: 15px;
-	margin-bottom: 15px;
-	clear: right;
+	padding-top: 25px;
+	margin-right: 18px;
+	clear: both;
 }
 
 .country_image {
-	display: inline-block;
-    padding-left: 20px;
+	display: block;
+    float: right;
+    width: 70px;
     text-align: center;
 }
 
@@ -109,54 +118,62 @@ section .section_content {
 	color: #128aa7;
 }
 
+.beach {
+	border-top: 1px solid #128aa7;
+	border-bottom: 1px solid #128aa7;
+}
+
+.arrow {
+	font-size: 12px;
+}
+
 .menu {
 	display: inline-block;
 	width: 1000px;
-	height: 25px;
+	height: 30px;
 	margin-top: -4px;
+	border-top: 1px solid #cacbcb;
+	border-bottom: 1px solid #000;
 	background-color: #323232;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.75);
-    padding-top: 10px;
 }
 
-.menu ul {
-	list-style-type: none;
-}
-
-.menu_item a {
+.menu_item {
 	position: relative;
-	float: left;
-	padding-left: 65px;
-	color: white;
-	padding-left: 43px;
+	width: 135px;
+	height: 30px;
 	text-align: center;
-	font-size: 16px;
-}
-
-.menu_item:hover {
-	background-color: yellow;      /* изменение оформления  - фон*/
-    color: black;                            /* цвет текста  */
+	display: inline-block;
 }
 
 .menu_item a {
-	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	line-height: 30px;
+	display: block;
 }
 
 .submenu {
 	display: none;
-    position: absolute;
-    width: 120px;
-    top: 43px;
+	width: inherit;
     left: 0;
-    /*background-color: white;*/
-    border: 1px solid red;
+    position: absolute;
+    background: #303030;
     box-shadow: 4px 4px 4px hsla( 200, 0%, 0%, 0.6);	
+}
+
+.submenu a {
+	display: block;
+}
+
+.menu_item:hover .submenu {
+	display: block;
 }
 
 .sidebar_left {
 	float: left;
 	width: 209px;
-	height: 524px;
+	height: 527px;
 	background-color: #edeef0;
 	overflow: hidden;
 }
@@ -164,7 +181,7 @@ section .section_content {
 .sidebar_right {
 	float: right;
 	width: 209px;
-	height: 524px;
+	height: 527px;
 	background-color: #edeef0;
 	overflow: hidden;
 }
@@ -172,6 +189,7 @@ section .section_content {
 .sidebar_item {
 	line-height: 1.5;
 	margin-left: 15px;
+	position: relative;
 	color: #424c43;
 	margin-top: 4px;
 	font-size: 14px;
@@ -186,14 +204,4 @@ h3 {
 
 .copyright {
 	font-family: sans-serif;
-}
-
-ul.menu:after {
-    display: block;
-    content: ' ';
-    clear: both;
-}
-
-ul.menu > ul.menu__item:hover > ul.submenu {
-    display: block;
 }
