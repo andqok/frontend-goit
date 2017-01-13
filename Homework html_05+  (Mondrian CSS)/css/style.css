@@ -1,0 +1,66 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse; /* No duplicate borders */
+	width: 500px;
+	table-layout: fixed;
+	white-space: nowrap;
+}
+
+table td {
+	border: 9px solid black;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+	/* no borders */
+
+.no-borders-top {	border-top: none; }
+
+.no-borders-left {	border-left: none; }
+
+.no-borders-right {	border-right: none;}
+
+.no-borders-bottom {	border-bottom: none;}
+
+	/* backround colors */
+
+.orange {	background-color: #ff5c13;}
+
+.yellow {	background-color: #fff325;}
+
+.black {	background-color: #000;}
+
+.blue {	background-color: #064c91;}
+
+/* Проблема как настроить ширину
+   так чтоб были pixel-perfect
+   Разваливается когда пробую через style="width: 7px" */
+
+.row-1 {	height: 51px; }
+.row-2 {	height: 138px; }
+.row-3 {	height: 140px; }
+.row-4, .row-5 {	height: 68px; }
+.row-6 {	height: 36px; }
+.row-7 {	height: 40px; }
+
+.row-1-a {
+	width: 12%
+}
+
+.row-1-b {
+	width: 8%;
+}
+
+.row-1-c {
+	width: 14%;
+}
+
+.row-1-d {
+	width: 18%;
+}
