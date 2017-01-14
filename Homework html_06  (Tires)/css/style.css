@@ -1,0 +1,592 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+@font-face {
+	font-family: 'Lucida Sans';
+	src: url('../fonts/lucida_sans_unicode_regular.woff2') format ('woff2'),
+			 url('../fonts/lucida_sans_unicode_regular.woff') format ('woff'),
+			 url('../fonts/lucida_sans_unicode_regular.ttf') format ('truetype');
+}
+
+body {
+	height: 100%;
+}
+
+.wrapper {
+	width: 912px;
+	height: 100%;
+	padding-left: 44px;
+	padding-right: 46px;
+	margin: 0 auto;
+}
+
+header {
+	height: 333px;
+}
+
+address {
+	width: 302px;
+	height: 33px;
+	padding-bottom: 3px;
+}
+
+address > * {
+	display: inline-block;
+}
+
+.phone-image {
+	margin-left: 7px;
+	margin-top: 3px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+nav ul {
+	display: inline-block;
+}
+
+.telephone-2 {
+	margin-left: 6px;
+}
+
+nav ul li a {
+	line-height: 34px;
+	color: #b1bcc0;
+}
+
+.navigation-item {
+	display: inline;
+}
+
+.navigation-item a {
+	text-transform: uppercase;
+}
+
+.clearfix {
+	overflow: hidden;
+	clear: both;
+}
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.authorization-bar {
+	width: 495px;
+	height: 27px;
+	padding: 4px;
+	margin-left: 10px;
+	box-sizing: border-box;
+	background-color: #b1bcc0;
+	background-image: linear-gradient(180deg, #206988 0%, #114165 59%, #0c3256 100%);
+	border-radius: 4px;
+	box-shadow: 1.5px 2.6px 3px rgba(150, 150, 150, 0.75);
+}
+
+.authorization-bar > form {
+	display: flex;
+	flex-flow: row nowrap; /* ? */
+	align-items: center;
+	justify-content: left;
+}
+
+.entrance {
+	margin-left: 9px;
+}
+
+.registration {
+	margin-left: 5px;
+}
+
+
+.authorization-bar__input {
+	height: 12px;
+	width: 110px;
+}
+
+.login-image {
+	margin-left: 2px;
+}
+
+.login-input {
+	margin-left: 5px;
+}
+
+.password-input {
+	margin-left: 5px;
+}
+
+.navigation {
+	margin-left: 11px;
+	margin-top: 20px;
+}
+
+.telephones {
+	font: normal 18px Arial, sans-serif;
+	letter-spacing: 0.2px;
+	color: #5e696d;
+	line-height: 30px;
+}
+
+.telephone-login-navigation > * {
+	display: inline-block;
+	margin-top: 17px;
+}
+
+.telephone-login-navigation {
+	height: 55px;
+}
+
+.cover-image img {
+	width: 100%;
+}
+
+/* =============== NAVIGATION (icons on the top right corner) ================= */
+
+.navigation {
+	width: 77px;
+	height: 21px;
+	border: 1px solid #bdc4c7;
+	border-radius: 10px;
+	line-height: 31px;
+}
+
+.navigation img {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.navigation img:first-child {
+	margin-left: 13px;
+}
+
+/*================== Navigation-menu ==========================*/
+
+.navigation-bar {
+	display: flex;
+	height: 33px;
+	width: 100%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4d5663+5,282c30+15,151719+51,050506+100 */
+	background: #4d5663; /* Old browsers */
+	background: -moz-linear-gradient(top,  #4d5663 5%, #282c30 15%, #151719 51%, #050506 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #4d5663 5%,#282c30 15%,#151719 51%,#050506 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #4d5663 5%,#282c30 15%,#151719 51%,#050506 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d5663', endColorstr='#050506',GradientType=0 ); /* IE6-9 */
+
+	border: 1px solid #0d1642;
+	border-radius: 5px;
+	box-shadow: 1.5px 2.6px 5px rgba(0, 0, 0, 0.75);
+}
+
+.navigation-menu {
+	position: relative;
+	margin-left: 135px;
+	padding-top: 5px;
+	box-sizing: border-box;
+}
+
+.navigation-item {
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+.navigation-item a {
+	height: 33px;
+	display: block;
+	font: normal 14px "Lucida Sans", Arial, sans-serif;
+	line-height: 25px;
+	color: #b1bcc0;
+	letter-spacing: -.1px;
+	padding: 0 15px 0 12px;
+}
+
+.navigation-item a:hover {
+	height: 24px;
+	background-color: #f60303;
+	background-image: linear-gradient(180deg, #206988 0%, #114165 59%, #0c3256 100%);
+	border-radius: 30px;
+	color: #fff;
+}
+
+.nav_oplata {
+	margin-left: -5px;
+}
+
+.nav_dostavka {
+	margin-left: 2px;
+}
+
+.nav_statji {
+	margin-left: 1px;
+}
+
+.nav_contacts {
+	margin-left: -5px;
+}
+
+.cart {
+	width: 214px;
+	display: flex;
+	justify-content: space-between;
+	letter-spacing: .5px;
+	margin-left: 51px;
+}
+
+.cart li {
+	display: inline-block;
+	color: #929b9f;
+	font: normal 11px Arial, sans-serif;
+}
+
+.cart-ico {
+	vertical-align: middle;
+}
+
+.cart__number-of-goods, .cart__sum-label {
+	color: #929b9f;
+}
+
+.cart__number-of-goods {
+	margin-left: 2px;
+}
+
+.cart__quantity, .cart__sum-number, .cart__sum-currency {
+	color: #0d5a8f;
+}
+
+.cart-item {
+	line-height: 32px;
+}
+
+/* ============  Панели поиска под навигацией. Три богатыря  =============== */
+
+.poisk {
+	width: 100%;
+	height: 148px;
+	padding-top: 10px;
+}
+
+
+.poisk-po-avto, .poisk-shin, .poisk-diskov {
+	height: 135px;
+	float: left;
+	border: 1px solid grey;
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+.poisk-po-avto {
+	width: 415px;
+	float: left;
+	border: 1px solid grey;
+	border-radius: 15px;
+	margin-left: 6px;
+	padding-top: 2px;
+	padding-left: 17px;
+	padding-right: 16px;
+	padding-bottom: 10px;
+}
+
+.poisk-shin {
+	width: 193px;
+	float: left;
+	border: 1px solid grey;
+	border-radius: 15px;
+	margin-left: 12px;
+	padding-left: 10px;
+	padding-top: 7px;
+}
+
+.poisk-diskov {
+	width: 267px;
+	float: left;
+	border: 1px solid grey;
+	border-radius: 15px;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-top: 7px;
+}
+
+/* ========== Шрифты верхней части всех трех панелей поиска ================ */
+
+.searchbar__heading {
+	font: normal 12px "Arial Black", sans-serif;
+	color: #114165;
+}
+
+.searchbar-first {
+	display: flex;
+	justify-content: space-between;
+}
+
+.heading-diski, .heading-shiny, .heading-poisk-po-avto {
+	display: inline-block;
+}
+
+.heading-diski, .heading-shiny {
+	font-size: 10px;
+}
+
+.heading-poisk-po-avto {
+	line-height: 20px;
+	margin-left: 5px;
+}
+
+.heading-poisk-shin, .heading-poisk-diskov {
+	text-transform: uppercase;
+}
+
+/*================= END панели поиска =======================================*/
+
+.main-wrapper {
+	width: 100%;
+	height: 651px;
+	overflow: hidden;
+	clear: both;
+}
+
+.aside-left {
+	width: 186px;
+	height: 100%;
+	float: left;
+	display: block;
+}
+
+.aside-right {
+	float: right;
+	width: 183px;
+	height: 100%;
+	display: block;
+}
+
+.aside-item {
+	width: 150px;
+	text-transform: uppercase;
+	border: 1px solid #79878d;
+	border-radius: 15px;
+	height: 26px;
+	font: normal 12px "Lucida Sans", Arial, sans-serif;
+	margin: 3px 0 3px 0px;
+}
+
+.aside-item img {
+	margin: 1px 3px 0 3px;
+	display: block;
+	float: left;
+}
+
+.aside-item section {
+	margin-bottom: 5px;
+	display: block;
+	float: left;
+}
+
+.aside-left__header {
+	width: 180px;
+}
+
+.aside-left-item__section {
+	width: 150px;
+}
+
+.aside-right__header {
+	width: 180px;
+}
+
+.aside-right-item__section {
+	width: 135px;
+}
+
+.content {
+	height: 833px;
+	padding-top: 10px;
+}
+
+.brands {
+	height: 77px;
+	margin-left: 100px;
+}
+
+.bottom-menu {
+	height: 100px;
+	background-color: #213a4d;
+}
+
+.bottom-menu ul li {
+	display: inline-block;
+	position: center;
+}
+
+.main-section {
+	width: 526px;
+	height: 616px;
+	float: left;
+	background-color: white;
+	background-image: linear-gradient(to top, #93a7b0 0%, #e4e7e8 100%);
+	box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+	box-sizing: border-box;
+	border-radius: 3px;
+	margin-left: 6px;
+	padding: 11px;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.catalog__item {
+	line-height: 30px;
+	list-style-image: url('../img/icons/bullet.png');
+  list-style-position: inside;
+	font: normal 12px "Lucida Sans", sans-serif;
+	padding-left: 27px;
+	line-height: 30px;
+}
+
+.catalog__item:hover {
+	list-style-image: url('../img/icons/bullet-hovered.png');
+	font: italic bold 14px "Arial", sans-serif;
+	list-style-position: inside;
+	padding-left: 27px;
+	line-height: 30px;
+}
+
+/* ============= TOVAR-ITEMS ================ */
+
+.tovar-item {
+	width: 140px;
+	margin: 15px 10px 0 15px;
+}
+
+.tovar-item:hover {
+  opacity: 0.7;
+}
+
+.tovar-item__image {
+	width: 138px;
+	height: 128px;
+	background-color: white;
+	border: 1px solid #a4aeb1;
+	border-radius: 7px;
+	margin: 0 auto;
+	display: inline-block;
+}
+
+.tovar-item__image img {
+	margin-top: 5px;
+	margin-left: 30px;
+}
+
+.tovar-item__heading {
+	width: 160px;
+}
+
+.tovar-item__brand {
+	font: bold 15px "Lucida Sans", Arial, sans-serif;
+	letter-spacing: 0.2px;
+	text-align: center;
+	color: #206988;
+}
+
+.tovar-item__model {
+	font: normal 13px "Lucida Sans", Arial, sans-serif;
+	text-align: center;
+	letter-spacing: 0.2px;
+	color: #000;
+}
+
+.tovar-item__price {
+	font: bold italic 16px "Arial", sans-serif;
+	text-align: center;
+	color: #114165;
+	margin-top: 6px;
+}
+
+.tovar-item__price-currency {
+	font: bold italic 12px "Arial", sans-serif;
+	text-align: center;
+	color: #114165;
+	display: inline;
+	margin-top: 6px;
+}
+
+.brands img {
+	margin-top: 28px
+}
+
+.brands a:not(:first-child) {
+	margin-left: 12px;
+}
+fieldset {
+	border: 0;
+}
+
+.aside-right__item {
+	line-height: 27px;
+	font: normal 13px "Lucida Sans", Arial, sans-serif;
+	margin: 10px;
+}
+
+.inline {
+	display: inline;
+}
+
+h2 {
+	font: normal 12px "Lucida Sans", Arial, sans-serif;
+	line-height: 25px;
+	color: #114165;
+}
+
+.footer__bottom-half {
+	background-color: #213a4d;
+	height: 100px;
+	padding-top: 10px;
+}
+
+.about-items {
+	display: inline;
+	font: normal 12px Arial, sans-serif;
+	color: #bec6c9;
+	margin: 10px 10px 0 10px;
+	padding: 0 0 0 10px;
+}
+
+.about-items::after {
+	border: 5px solid white;
+}
+
+
+.about {
+		text-align: center;
+		width: 100%;
+		margin 0 auto;
+}
+
+.creators {
+	font: normal 10px Arial, sans-serif;
+	color: #7f4740;
+	margin-top: 10px;
+}
+
+.authoriz-links {
+	font: normal 11px "Lucida Sans", Arial, sans-serif;
+	color: #fff;
+}
+
+.forgot-password {
+	margin-left: 24px;
+	color: #bfbfbf;
+	font: normal 12px "Lucida Sans", Arial, sans-serif;
+	text-decoration:  underline;
+}
+
+.division {
+	font: normal 11px "Lucida Sans", Arial, sans-serif;
+	color: #fff;
+	margin-left: 5px;
+	line-height: 16px;
+}
