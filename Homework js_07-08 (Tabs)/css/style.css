@@ -1,0 +1,112 @@
+/* Style the list */
+
+html, body {
+    height: 100%;
+    font-family: Arial;
+}
+
+.wrapper {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 350px;
+}
+
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #BBFFC5;
+}
+
+/* Float the list items side by side */
+ul.tab li {
+    float: left;
+    padding-top: 10px;
+}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 4px 6px 0 2px;
+    margin-bottom: -3px;
+    margin-right: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #5B83E8;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: #5B83E8; 
+    color: #fff;
+}
+
+/* Style the tab content */
+.tabcontent {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: none;
+}
+
+.displayed {
+    display: block;
+}
+
+.hint {
+    width: 280px;
+    border: 1px solid grey;
+    position: absolute;
+    z-index: 50;
+    margin-left: 222px;
+    padding: 5px;
+    visibility: hidden;
+}
+
+.viz {
+    visibility: visible;
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+}
+
+
+ol {
+    list-style-type: none;
+    width: 300px;
+    display: inline-block;
+}
+
+ol li {
+    width: 250px;
+    height: 32px;
+}
+
+label {
+    width: 50px;
+}
+
+ol li *{
+    display: inline-block;
+}
+
+input {
+    float: right;
+}
+
+button {
+    margin-left: 50px;
+    display: block;
+}

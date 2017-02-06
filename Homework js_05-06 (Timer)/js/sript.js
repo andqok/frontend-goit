@@ -1,5 +1,5 @@
 var seconds = 0,
-	miliseconds = 0;
+      miliseconds = 0;
 var ms = document.getElementById("ms");
 var sec = document.getElementById("sec");
 
@@ -7,6 +7,7 @@ function timer () {
 	document.getElementById("start").onclick = pause;
 	document.getElementById("start").innerHTML = "Stop";
 	action = setInterval(times, 41);
+
 	function times () {
 		miliseconds += 41;
 		ms.innerHTML = miliseconds;
@@ -14,9 +15,6 @@ function timer () {
 			miliseconds = miliseconds - 1000;
 			seconds = seconds + 1;
 			sec.innerHTML = getFormattedTime();
-			if (seconds < 10) {
-				sec.innerHTML = "00:00:0" + seconds;
-			}
 		}
 	}
 };
@@ -25,17 +23,18 @@ function pause() {
 	clearTimeout(action);
 	document.getElementById("start").onclick = timer;
 	document.getElementById("start").innerHTML = "Start";
-}
+};
 
 function stopBinge() {
 	pause();
+	seconds = 0;
 	sec.innerHTML = "00:00:00";
 	ms.innerHTML = "";
-}
+};
 
 function getFormattedTime () {
-		return getHours(seconds) + ":" + getMinutes(seconds) + ":" + getSeconds(seconds);
-		}
+	return getHours(seconds) + ":" + getMinutes(seconds) + ":" + getSeconds(seconds);
+};
 
 function getSeconds(seconds) {
 	if ((seconds % 60) < 10) {
