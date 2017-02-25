@@ -1,0 +1,47 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %title Document
+    %link{:href => "css/style.css", :rel => "stylesheet"}/
+  %body
+    %table
+      / Row 1     height="51px"  !
+      %tr.row-1
+        %td.row-1-a.no-borders-top.no-borders-left{:colspan => "2"}
+        %td.row-1-b.no-borders-top.no-borders-left.no-borders-right
+        %td.row-1-c.no-borders-top.no-borders-left
+        %td.row-1-d.no-borders-top.no-borders-right.yellow{:colspan => "2"}
+      / Row 2     height="138px"  !
+      %tr.row-2
+        %td.row-2-a.no-borders-left
+        %td.orange{:colspan => "3", :rowspan => "2"}
+        %td.no-borders-right{:colspan => "2"}
+      / Row 3     height="140px"  !
+      %tr.row-3
+        %td.no-borders-left{:rowspan => "2"}
+        %td
+        %td.no-borders-right
+      / Row 4     height="68px"  !
+      %tr.row-4
+        %td.black{:colspan => "2"}
+        %td
+        %td.no-borders-right{:colspan => "2"}
+      / Row 5    height="68px" !
+      %tr.row-5
+        %td.no-borders-left.no-borders-bottom.yellow{:rowspan => "3"}
+        %td.black{:colspan => "2"}
+        %td
+        %td.no-borders-right.blue{:colspan => "2", :rowspan => "2"}
+      / Row 6   height="36px"  !
+      %tr.row-6
+        %td.no-borders-bottom{:colspan => "2", :rowspan => "2"}
+        %td.black
+      /
+        Row 7   height="40px"
+        Table cell spans past the end of its row group established by a tbody element; clipped to the end of the row group
+        \- fixed by deleting rowspan altogether
+        \!
+      %tr.row-7
+        %td.no-borders-right.no-borders-bottom

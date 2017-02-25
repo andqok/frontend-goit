@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <meta charset='UTF-8'>
+    <title>Document</title>
+    <link href='css/style.css' rel='stylesheet'>
+    <link href='css/selectric.css' rel='stylesheet'>
+    <link href='css/jquery.selectBox.css' rel='stylesheet'>
+    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+    <script src='js/jquery.jcarousel.js'></script>
+    <script src='js/jquery.selectric.min.js'></script>
+    <script src='js/jquery.selectBox.js'></script>
+    <script src='js/jquery.checkbox.js'></script>
+    <script src='js/jquery.color.js'></script>
+  </head>
+  <body>
+    <div class='wrapper'>
+      <h1 class='heading'>Carousel-ka</h1>
+      <h2>done with love</h2>
+      <div class='jcarousel-wrapper'>
+        <div class='jcarousel'>
+          <ul>
+            <li>
+              <img src='img/img0.jpg'>
+            </li>
+            <li>
+              <img src='img/img1.jpg'>
+            </li>
+            <li>
+              <img src='img/img2.jpg'>
+            </li>
+            <li>
+              <img src='img/img3.jpg'>
+            </li>
+            <li>
+              <img src='img/img4.jpg'>
+            </li>
+            <li>
+              <img src='img/img5.jpg'>
+            </li>
+            <li>
+              <img src='img/img6.jpg'>
+            </li>
+            <li>
+              <img src='img/img7.jpg'>
+            </li>
+            <li>
+              <img src='img/img8.png'>
+            </li>
+            <li>
+              <img src='img/img9.png'>
+            </li>
+          </ul>
+        </div>
+        <a class='jcarousel-control-prev inactive' data-jcarouselcontrol='true' href='#'><</a>
+        <a class='jcarousel-control-next' data-jcarouselcontrol='true' href='#'>></a>
+        <p class='jcarousel-pagination'>
+          <a class='active' href='#0'></a>
+          <a href='#1'></a>
+          <a href='#2'></a>
+          <a href='#3'></a>
+          <a href='#4'></a>
+          <a href='#5'></a>
+          <a href='#6'></a>
+          <a href='#7'></a>
+          <a href='#8'></a>
+          <a href='#9'></a>
+        </p>
+      </div>
+      <div class='wrapper-two'>
+        <p>Selectric - <span id="selectric-value">value not selected</span></p>
+        <select id='selectric-select'>
+          <option value=''></option>
+          <option value=''>Long item, lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, consectetur, repellat animi</option>
+          <option value='Value1'>Apples</option>
+          <option value='Value2'>Oranges</option>
+          <option value='Value3'>Potatoes</option>
+          <option value='Value3'>Cucumbers</option>
+          <option value='Value3'>Watermellons</option>
+          <input id='inputik'>
+          <button id='buttonka'>Buttonka</button>
+        </select>
+      </div>
+      <div class='wrapper-three'>
+        <p>selectBox - </p>
+        <select id='selectBox-select'>
+          <option value=''></option>
+          <option value=''>Long item, lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, consectetur, repellat animi</option>
+          <option value='Value1'>Marakaibo</option>
+          <option value='Value2'>Rio</option>
+          <option value='Value3'>Bogota</option>
+          <option value='Value3'>Uruguay</option>
+          <option value='Value3'>Tokio</option>
+        </select>
+      </div>
+      <div class='wrapper-four'>
+        <div class='column-one'>
+          <p>jQuery</p>
+          <span class='niceCheck'>
+            <label for='check1'>Check 1</label>
+            <input id='check1' name='ch1' type='Checkbox'>
+          </span>
+          <span class='niceCheck'>
+            <label for='check2'>Check 2</label>
+            <input id='check2' name='ch2' type='Checkbox'>
+          </span>
+          <span class='niceCheck'>
+            <label for='check3'>Check 3</label>
+            <input id='check3' name='ch3' type='Checkbox'>
+          </span>
+        </div>
+        <div class='column-two'>
+          <p>CSS</p>
+          <span class='niceCheck-imdifferent'>
+            <label for='check1+'>Check 1</label>
+            <input id='check1+' name='ch1+' type='Checkbox'>
+            <div class='difference'>
+              <label for='check1+'>◉</label>
+            </div>
+          </span>
+          <span class='niceCheck-imdifferent'>
+            <label for='check2+'>Check 2</label>
+            <input id='check2+' name='ch2+' type='Checkbox'>
+            <div class='difference'>
+              <label for='check2+'>◉</label>
+            </div>
+          </span>
+          <span class='niceCheck-imdifferent'>
+            <label for='check3+'>Check 3</label>
+            <input id='check3+' name='ch3+' type='Checkbox'>
+            <div class='difference'>
+              <label for='check3+'>◉</label>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div class='wrapper-five'>
+        <nav>
+          <ul>
+            <li>
+              <a href='#'>Nav 1</a>
+            </li>
+            <li>
+              <a href='#'>Nav 2</a>
+            </li>
+            <li class='dropdown'>
+              <a href='#'>Nav 3 >></a>
+              <ul class='sub-menu'>
+                <li>
+                  <a href='#'>Nav 3.1</a>
+                </li>
+                <li>
+                  <a href='#'>Nav 3.2</a>
+                </li>
+                <li>
+                  <a href='#'>Nav 3.3</a>
+                </li>
+                <li class='dropdown'>
+                  <a href='#'>Nav 3.4 >></a>
+                  <ul class='sub-menu'>
+                    <li>
+                      <a>Nav 3.4.1</a>
+                      <li class='dropdown'>
+                        <a href='#'>Nav 3.4.2 >></a>
+                        <ul class='sub-menu'>
+                          <li>
+                            <a href='#'>Nav 3.4.2.1</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href='#'>Nav 3.5</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href='#'>Nav 4</a>
+            </li>
+            <li>
+              <a href='#'>Nav 5</a>
+            </li>
+            <li>
+              <a href='#'>Nav 6</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <script async='' src='js/script.js'></script>
+  </body>
+</html>
