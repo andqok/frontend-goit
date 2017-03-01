@@ -1,0 +1,64 @@
+!!! 5
+%html{lang: "en"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}
+    %meta{charset: "UTF-8"}
+    %title Contemplating Templating
+    %link{href: "css/style.css", rel: "stylesheet"}
+    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"}
+  %body
+    .wrapper
+      .subwrapper-one
+        .carousel-switch-left
+          %span Left
+        .carousel-hider
+          %ul.carousel-list
+            %li.carousel-element
+              %img{src: "img/image-1.jpg"}
+              %p
+            %li.carousel-element
+              %img{src: "img/image-2.jpg"}
+              %p
+            %li.carousel-element
+              %img{src: "img/image-3.jpg"}
+              %p
+            %li.carousel-element
+              %img{src: "img/image-4.jpg"}
+              %p
+            %li.carousel-element
+              %img{src: "img/image-5.jpg"}
+              %p
+            %li.carousel-element
+              %img{src: "img/image-6.jpg"}
+              %p
+            %li.carousel-element
+              %img{src: "img/image-7.jpg"}
+              %p
+            %li.carousel-element
+              %img{src: "img/image-8.jpg"}
+              %p
+            %li.carousel-element
+              %img{src: "img/image-9.jpg"}
+              %p
+            %li.carousel-element
+              %img{src: "img/image-10.jpg"}
+        .carousel-switch-right
+          %span Right
+      .subwrapper-two#sub-two
+
+    %script{src: "js/script.js"}
+    %script{src: "js/templating.js"}
+    %script#item_tmpl(type = "text/html")
+      :plain
+        {{ for ( i = 0; i < obj.artists.length; i++) { }}
+        <div>
+        <h1 class="artist-name">{{=obj.artists[i].name}}</h1>
+        <h3 class="years-lived">{{=obj.artists[i].lived}}</h3>
+        <ul>
+        {{ for ( u = 0; u < obj.artists[i].notableWorks.length; u++) { }}
+        <li>{{=obj.artists[i].notableWorks[u]}}</li>
+        {{ } }}
+        </ul>
+        <div>
+        {{ } }}
+

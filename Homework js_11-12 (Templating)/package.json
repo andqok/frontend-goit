@@ -1,0 +1,20 @@
+{
+  "name": "carousel-app",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-ruby-haml": "0.0.9",
+    "gulp-sass": "^3.1.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "scripts": {
+    "build": "webpack src/js/test.js dist/js/test.js",
+    "execute": "node dist/js/test.js",
+    "start": "npm run build && npm run execute"
+  }
+}
