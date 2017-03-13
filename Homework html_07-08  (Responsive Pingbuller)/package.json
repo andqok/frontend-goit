@@ -1,0 +1,17 @@
+{
+  "name": "homework_html_07=08_(responsive_pingbuller)",
+  "version": "1.0.0",
+  "description": "GoIT GoFrontend7 Homework html_07=08",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Domanski",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-ruby-haml": "0.0.9",
+    "gulp-sass": "^3.1.0"
+  }
+}

@@ -1,13 +1,13 @@
 {
-  "name": "hw13-14",
+  "name": "homework_js_09-10_(quiz_templating)",
   "version": "1.0.0",
-  "description": "",
+  "description": "GoIT GoFrontend7 Homework js_13-14",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andrew Domanski, andqok@gmail.com",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "dependencies": {
     "browser-sync": "^2.18.8",
     "grunt": "^1.0.1",

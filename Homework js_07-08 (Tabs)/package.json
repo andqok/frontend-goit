@@ -1,0 +1,17 @@
+{
+  "name": "homework_js_07_08_(tabs))",
+  "version": "1.0.0",
+  "description": "GoIT GoFrontend7 Homework js_07_08",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Domanski",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-ruby-haml": "0.0.9",
+    "gulp-sass": "^3.1.0"
+  }
+}

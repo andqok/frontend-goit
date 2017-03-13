@@ -1,6 +1,7 @@
 {
-  "name": "carousel-app",
+  "name": "homework_js_09-10_(carousel_select_checkbox)",
   "version": "0.0.1",
+  "description": "GoIT GoFrontend7 Homework js_11-12",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "lodash": "^4.17.4"

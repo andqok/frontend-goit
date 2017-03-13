@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang='ru'>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <meta charset='UTF-8'>
+    <title>Zazor - drives you away!</title>
+    <link href='css/style.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class='wrapper'>
+      <!-- Header: TELEPHONE-LOGIN-NAVIGATION BARS -->
+      <header>
+        <div class='telephone-login-navigation'>
+          <!-- Telephones -->
+          <address>
+            <img alt='phone' class='phone-image' src='img/icons/phone.png'>
+            <p class='telephones'>(044)123-45-67</p>
+            <p class='telephones telephone-2'>(044)567-89-10</p>
+          </address>
+          <!-- Authorization -->
+          <div class='authorization-bar'>
+            <form action='index.html' class='authorization-bar__form' id='authorization-form' method='post'>
+              <img alt='' class='login-image' src='img/icons/login.png'>
+              <input class='authorization-bar__input login-input' type='text'>
+              <input class='authorization-bar__input password-input' type='text'>
+              <a class='authoriz-links entrance' href='#' onclick="document.getElementById('authorization-form').submit();">вход</a>
+              <a class='division' href='#'></a>
+              <a class='authoriz-links registration' href='#'>регистрация</a>
+              <a class='authoriz-links forgot-password' href='#'>забыли пароль?</a>
+            </form>
+            <a class='authorization-bar__registration' href='#' text='регистрация'></a>
+            <a class='authorization-bar__forgot-pwd' href='#' text='забыли пароль?'></a>
+          </div>
+          <!-- Navigation -->
+          <div class='navigation'>
+            <img alt='home' src='img/icons/home.png'>
+            <img alt='site-map' src='img/icons/site-map.png'>
+            <img alt='mail' src='img/icons/envelope.png'>
+          </div>
+        </div>
+        <!-- END topmost bar -->
+        <!-- BANNER -->
+        <img alt='Cover image. Zazor drives you away!' class='cover-image' src='img/zazor-drives-you-away.png'>
+        <nav class='navigation-bar'>
+          <ul class='navigation-menu'>
+            <li class='navigation-item'>
+              <a class='nav_o-kompanii' href='#'>О компании</a>
+            </li>
+            <li class='navigation-item'>
+              <a class='nav_oplata' href='#'>Оплата</a>
+            </li>
+            <li class='navigation-item'>
+              <a class='nav_dostavka' href='#'>Доставка</a>
+            </li>
+            <li class='navigation-item'>
+              <a class='nav_statji' href='#'>Статьи</a>
+            </li>
+            <li class='navigation-item'>
+              <a class='nav_contacts' href='#'>Контакты</a>
+            </li>
+            <li class='navigation-item'>
+              <img alt='' src=''>
+            </li>
+          </ul>
+          <div class='cart'>
+            <li>
+              <a class='side' href='#'>
+                <p class='cart-item'>
+                  <img alt='' class='cart-ico' src='img/icons/cart.png'>
+                  <span class='cart__number-of-goods'>товаров:</span>
+                  <span class='cart__quantity'>0</span>
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class='side' href='#'>
+                <p class='cart-item'>
+                  <span class='cart__sum-label'>на сумму:</span>
+                  <span class='cart__sum-number'>0,00</span>
+                  <span class='cart__sum-currency'>грн.</span>
+                </p>
+              </a>
+            </li>
+          </div>
+        </nav>
+      </header>
+      <!-- SEARCH BARS -->
+      <div class='poisk'>
+        <div class='poisk-po-avto'>
+          <div class='searchbar searchbar-first'>
+            <h5 class='searchbar__heading heading-diski'>Диски:</h5>
+            <h4 class='searchbar__heading heading-poisk-po-avto'>Поиск по автомобилю</h4>
+            <h3 class='searchbar__heading heading-shiny'>Шины:</h3>
+          </div>
+          <div class='poisk-content'>
+            <div class='labels'></div>
+            <div class='inputs'></div>
+          </div>
+          <div class='poisk-content'>
+            <div class='labels'></div>
+            <div class='inputs'></div>
+          </div>
+          <div class='further-search'>
+            <a class='further-search__link' href='#'>поиск</a>
+          </div>
+        </div>
+        <!-- END Поиск по авто -->
+        <!-- Поиск шин -->
+        <div class='poisk-shin'>
+          <div class='searchbar'>
+            <h4 class='searchbar__heading heading-poisk-shin'>Поиск шин</h4>
+          </div>
+          <div class='size'></div>
+          <div class='r'></div>
+          <div class='season'></div>
+          <div class='further-search'>
+            <a class='further-search__link' href='#'>поиск</a>
+          </div>
+        </div>
+        <!-- END поиск шин -->
+        <!-- Поиск дисков -->
+        <div class='poisk-diskov'>
+          <div class='searchbar'>
+            <h4 class='searchbar__heading heading-poisk-diskov'>Поиск дисков</h4>
+          </div>
+          <div class='poisk-diskov__diametr-diska'>
+            <label for='diametr'>Диаметр диска:</label>
+            <select id='diametr' name='' type='text' value=''>
+              <option value=''></option>
+            </select>
+          </div>
+          <div class='poisk-diskov__kolichestvo'>
+            <label for='kolichestvo'>Количество крепежных отверстий:</label>
+            <select id='kolichestvo' name='' type='text' value=''>
+              <option value=''></option>
+            </select>
+          </div>
+          <div class='poisk-diskov__diametr-otverstia'>
+            <label for='diametr-otverstia'>Диаметр расположения крепежных отверстий:</label>
+            <select id='diametr-otverstia' name='' type='text' value=''>
+              <option value=''></option>
+            </select>
+          </div>
+          <div class='further-search'>
+            <a class='further-search__link' href='#'>поиск...</a>
+          </div>
+        </div>
+        <!-- END поиск дисков -->
+      </div>
+      <!-- END поиск -->
+      <div class='main-wrapper'>
+        <!-- ASIDE-LEFT -->
+        <aside class='aside-left'>
+          <header class='aside-item aside-left__header'>
+            <img alt='icon' src='img/icons/aside-header-left.png'>
+            <h2>
+              Каталог продукции
+              <h2></h2>
+            </h2>
+          </header>
+          <section>
+            <header class='aside-item aside-left-item__section'>
+              <img alt='icon' src='img/icons/disc.png'>
+              <h2>Шины</h2>
+            </header>
+            <ul>
+              <li class='catalog__item'>
+                <a href='#'>Наименование 1</a>
+              </li>
+              <li class='catalog__item'>
+                <a href='#'>Наименование 2</a>
+              </li>
+              <li class='catalog__item'>
+                <a href='#'>Наименование 3</a>
+              </li>
+              <li class='catalog__item'>
+                <a href='#'>Наименование 4</a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <header class='aside-item aside-left-item__section'>
+              <img alt='icon' src='img/icons/disc.png'>
+              <h2>Диски</h2>
+            </header>
+            <ul>
+              <li class='catalog__item'>
+                <a href='#'>Наименование 1</a>
+              </li>
+              <li class='catalog__item'>
+                <a href='#'>Наименование 2</a>
+              </li>
+              <li class='catalog__item'>
+                <a href='#'>Наименование 3</a>
+              </li>
+              <li class='catalog__item'>
+                <a href='#'>Наименование 4</a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <header class='aside-item aside-left-item__section'>
+              <img alt='icon' src='img/icons/disc.png'>
+              <h2>Болты</h2>
+            </header>
+            <ul>
+              <li class='catalog__item'>
+                <a href='#'>Наименование 1</a>
+              </li>
+              <li class='catalog__item'>
+                <a href='#'>Наименование 2</a>
+              </li>
+              <li class='catalog__item'>
+                <a href='#'>Наименование 3</a>
+              </li>
+              <li class='catalog__item'>
+                <a href='#'>Наименование 4</a>
+              </li>
+            </ul>
+          </section>
+        </aside>
+        <!-- MAIN SECTION -->
+        <!-- HERE ARE TIRES. ROW 1 -->
+        <section class='main-section'>
+          <a class='tovar-item' href='#'>
+            <figure>
+              <figcaption class='tovar-item__brand'>Goodyear</figcaption>
+              <figcaption class='tovar-item__model'>Ultra Grip Extreme</figcaption>
+              <div class='tovar-item__image'>
+                <img alt='' src='img/tire-goodyear.png'>
+              </div>
+              <figcaption class='tovar-item__price'>
+                90.00
+                <p class='tovar-item__price-currency'>грн.</p>
+              </figcaption>
+            </figure>
+          </a>
+          <a class='tovar-item' href='#'>
+            <figure>
+              <figcaption class='tovar-item__brand'>Nokian</figcaption>
+              <figcaption class='tovar-item__model'>Hakkapeliitta R</figcaption>
+              <div class='tovar-item__image'>
+                <img alt='' src='img/tire-nokian.png'>
+              </div>
+              <figcaption class='tovar-item__price'>
+                115.00
+                <p class='tovar-item__price-currency'>грн.</p>
+              </figcaption>
+            </figure>
+          </a>
+          <a class='tovar-item' href='#'>
+            <figure>
+              <figcaption class='tovar-item__brand'>Hankook</figcaption>
+              <figcaption class='tovar-item__model'>K 708 155/65 R14</figcaption>
+              <div class='tovar-item__image'>
+                <img alt='' src='img/tire-hankook.png'>
+              </div>
+              <figcaption class='tovar-item__price'>
+                393.00
+                <p class='tovar-item__price-currency'>грн.</p>
+              </figcaption>
+            </figure>
+          </a>
+          <!-- HERE ARE TIRES. ROW 2 -->
+          <a class='tovar-item' href='#'>
+            <figure>
+              <figcaption class='tovar-item__brand'>Goodyear</figcaption>
+              <figcaption class='tovar-item__model'>Ultra Grip Extreme</figcaption>
+              <div class='tovar-item__image'>
+                <img alt='' src='img/tire-goodyear.png'>
+              </div>
+              <figcaption class='tovar-item__price'>
+                90.00
+                <p class='tovar-item__price-currency'>грн.</p>
+              </figcaption>
+            </figure>
+          </a>
+          <a class='tovar-item' href='#'>
+            <figure>
+              <figcaption class='tovar-item__brand'>Nokian</figcaption>
+              <figcaption class='tovar-item__model'>Hakkapeliitta R</figcaption>
+              <div class='tovar-item__image'>
+                <img alt='' src='img/tire-nokian.png'>
+              </div>
+              <figcaption class='tovar-item__price'>
+                115.00
+                <p class='tovar-item__price-currency'>грн.</p>
+              </figcaption>
+            </figure>
+          </a>
+          <a class='tovar-item' href='#'>
+            <figure>
+              <figcaption class='tovar-item__brand'>Hankook</figcaption>
+              <figcaption class='tovar-item__model'>K 708 155/65 R14</figcaption>
+              <div class='tovar-item__image'>
+                <img alt='' src='img/tire-hankook.png'>
+              </div>
+              <figcaption class='tovar-item__price'>
+                393.00
+                <p class='tovar-item__price-currency'>грн.</p>
+              </figcaption>
+            </figure>
+          </a>
+          <!-- HERE ARE TIRES. ROW 3 -->
+          <a class='tovar-item' href='#'>
+            <figure>
+              <figcaption class='tovar-item__brand'>Goodyear</figcaption>
+              <figcaption class='tovar-item__model'>Ultra Grip Extreme</figcaption>
+              <div class='tovar-item__image'>
+                <img alt='' src='img/tire-goodyear.png'>
+              </div>
+              <figcaption class='tovar-item__price'>
+                90.00
+                <p class='tovar-item__price-currency'>грн.</p>
+              </figcaption>
+            </figure>
+          </a>
+          <a class='tovar-item' href='#'>
+            <figure>
+              <figcaption class='tovar-item__brand'>Nokian</figcaption>
+              <figcaption class='tovar-item__model'>Hakkapeliitta R</figcaption>
+              <div class='tovar-item__image'>
+                <img alt='' src='img/tire-nokian.png'>
+              </div>
+              <figcaption class='tovar-item__price'>
+                115.00
+                <p class='tovar-item__price-currency'>грн.</p>
+              </figcaption>
+            </figure>
+          </a>
+          <a class='tovar-item' href='#'>
+            <figure>
+              <figcaption class='tovar-item__brand'>Hankook</figcaption>
+              <figcaption class='tovar-item__model'>K 708 155/65 R14</figcaption>
+              <div class='tovar-item__image'>
+                <img alt='' src='img/tire-hankook.png'>
+              </div>
+              <figcaption class='tovar-item__price'>
+                393.00
+                <p class='tovar-item__price-currency'>грн.</p>
+              </figcaption>
+            </figure>
+          </a>
+        </section>
+        <!-- ASIDE-LEFT -->
+        <aside class='aside-right'>
+          <header class='aside-item aside-right__header'>
+            <img alt='icon' src='img/icons/aside-header-right.png'>
+            <h2>
+              Бренды:
+              <h2></h2>
+            </h2>
+          </header>
+          <form action='index.html' method='post'>
+            <fieldset>
+              <header class='aside-item aside-right-item__section'>
+                <img alt='icon' src='img/icons/disc.png'>
+                <h2>Шины</h2>
+              </header>
+              <p class='aside-right__item'>
+                <input id='tires-brand-1' type='checkbox' value=''>
+                <label for='tires-brand-1'>Бренд 1</label>
+              </p>
+              <p class='aside-right__item'>
+                <input id='tires-brand-2' type='checkbox' value=''>
+                <label for='tires-brand-2'>Бренд 2</label>
+              </p>
+              <p class='aside-right__item'>
+                <input id='tires-brand-3' type='checkbox' value=''>
+                <label for='tires-brand-3'>Бренд 3</label>
+              </p>
+            </fieldset>
+            <fieldset>
+              <header class='aside-item aside-right-item__section'>
+                <img alt='icon' src='img/icons/disc.png'>
+                <h2>Диски</h2>
+              </header>
+              <p class='aside-right__item'>
+                <input id='disk-brand-1' type='checkbox' value=''>
+                <label for='disk-brand-1'>Бренд 1</label>
+              </p>
+              <p class='aside-right__item'>
+                <input id='disk-brand-2' type='checkbox' value=''>
+                <label for='disk-brand-2'>Бренд 2</label>
+              </p>
+              <p class='aside-right__item'>
+                <input id='disk-brand-3' type='checkbox' value=''>
+                <label for='disk-brand-3'>Бренд 3</label>
+              </p>
+            </fieldset>
+            <input name='' type='submit' value='ВЫБРАТЬ'>
+          </form>
+        </aside>
+      </div>
+      <!-- FOOTER -->
+      <footer>
+        <div class='brands'>
+          <!--
+            Бренды названы по номерам для сохраниния порядка,
+            но мне кажется нужным назвать файл и по названию бренда. Например, их так легче заменить
+          -->
+          <a href='#'>
+            <img alt='Toyo Tires' src='img/brands/08-toyo.png'>
+          </a>
+          <a href='#'>
+            <img alt='Bridgestone' src='img/brands/07-bridgestone.png'>
+          </a>
+          <a href='#'>
+            <img alt='Roemers Tire Factory' src='img/brands/06-roemers_tire_factory.png'>
+          </a>
+          <a href='#'>
+            <img alt='Avon Tires' src='img/brands/05-avon.png'>
+          </a>
+          <a href='#'>
+            <img alt='Cooper Tires' src='img/brands/04-cooper.png'>
+          </a>
+          <a href='#'>
+            <img alt='Pirelli' src='img/brands/03-pirelli.png'>
+          </a>
+          <a href='#'>
+            <img alt='Continental' src='img/brands/02-continental.png'>
+          </a>
+          <a href='#'>
+            <img alt='Dunlop' src='img/brands/01-dunlop.png'>
+          </a>
+        </div>
+        <div class='footer__bottom-half'>
+          <section class='about'>
+            <a class='about-items' href='#'>О компании</a>
+            <a class='about-items' href='#'>Доставка</a>
+            <a class='about-items' href='#'>Статьи</a>
+            <a class='about-items' href='#'>Контакты</a>
+            <p class='creators'>Создание сайта (с) Global Vision</p>
+          </section>
+        </div>
+      </footer>
+    </div>
+    <!-- Wrapper ended -->
+  </body>
+</html>
