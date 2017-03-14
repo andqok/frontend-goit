@@ -1,26 +1,42 @@
-var gulp        = require('gulp');
-var haml        = require('gulp-ruby-haml');
-var sass        = require('gulp-sass');
-var browserSync = require('browser-sync');
-var reload      = browserSync.reload;
-var paths       = {
+const gulp        = require('gulp');
+const haml        = require('gulp-ruby-haml');
+const sass        = require('gulp-sass');
+const browserSync = require('browser-sync');
+const babili      = require('gulp-babili');
+const htmlmin     = require('gulp-htmlmin');
+const cleanCSS    = require('gulp-clean-css');
+const reload      = browserSync.reload;
+const paths       = {
   html:['index.html'],
   css:['main.scss']
 }
 
 gulp.task('haml', function () {
-    gulp.src('src/index.haml')
-    .pipe(haml())
-    .pipe(gulp.dest('dist'))
-    .pipe(reload({stream:true}));
+  gulp.src('src/index.haml')
+  .pipe(haml())
+  .pipe(htmlmin({collapseWhitespace: true}))
+  .pipe(gulp.dest('dist'))
+  .pipe(reload({stream:true}));
 });
 
 gulp.task('sass', function() {
-    gulp.src('src/sass/style.sass')
-    .pipe(sass()
-    .on('error', sass.logError))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(reload({stream:true}));
+  gulp.src('src/sass/style.sass')
+  .pipe(sass()
+  .on('error', sass.logError))
+  .pipe(cleanCSS())
+  .pipe(gulp.dest('dist/css'))
+  .pipe(reload({stream:true}));
+});
+
+gulp.task('minify', function () {
+  gulp.src('src/js/*.js')
+    .pipe(babili({
+      mangle: {
+        keepClassNames: true
+      }
+    }))
+  .pipe(gulp.dest('dist/js'));
+
 });
 
 gulp.task('browserSync', function() {
@@ -34,7 +50,7 @@ gulp.task('browserSync', function() {
   });
 });
 
-gulp.task('default', ['haml', 'sass', 'browserSync']);
+gulp.task('default', ['haml', 'sass', 'minify', 'browserSync']);
 gulp.watch('src/index.haml', ['haml']);
 gulp.watch('src/sass/style.sass', ['sass']);
-
+gulp.watch('src/js/*.js', ['minify']);

@@ -12,9 +12,17 @@
     "browser-sync": "^2.18.8",
     "grunt": "^1.0.1",
     "gulp": "^3.9.1",
+    "gulp-babili": "0.0.2",
     "gulp-ruby-haml": "0.0.9",
     "gulp-sass": "^3.1.0",
+    "through2": "^2.0.3",
+    "uglify-js": "^2.8.12",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^3.0.3",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-uglify": "^2.1.0"
   }
 }

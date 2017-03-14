@@ -1,6 +1,7 @@
 !!!
 %html
   %head
+    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", :rel => "stylesheet"}
     %link{:href => "css/style.css", :rel => "stylesheet"}
   %body
     .wrapper
@@ -9,71 +10,28 @@
       %p.instructions Instructions: just press buttons! Test takes 5 questions, beauty.
       .test-view#tost
         %h3.take-test-button Take the test!
+    .modal.fade{:role => "dialog", :tabindex => "-1"}
+      .modal-dialog{:role => "document"}
+        .modal-content
+          .modal-header
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} &#215;
+            %h4.modal-title Modal title
+          .modal-body
+            %p One fine body&#8230;
+          .modal-footer
+            %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-primary{:type => "button"} Save changes
+    .alert.alert-success.hidden#success
+      %strong Success!
+      Indicates a successful or positive action.
+    .alert.alert-danger.hidden#failure
+      %strong Wrong!
+      Try again and don't be like that!
+
 
     %script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
     %script(src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js")
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.8.2/js-yaml.min.js"}
     %script{:src => "js/script.js"}
-    %script{:type => "text/template", :id => "test-template"}
-    :plain
-      <h2><%=question%></h2>
-      <table>
-      <% for (let i=1; i<count; i++) { %>
-      <tr>
-      <td>
-      <input class="checkbox" type="radio" id="chbx-<%=i%>">
-      </td>
-      <td>
-      <label class="checkbox-label" for="chbx-<%=i%>"><%=variants[i]%></label>
-      </td>
-      </tr>
-      <% } %>
-      </table>
-    %script{:type => "text/yaml", :id => "questions"}
-    :plain
-      ---
-      '1':
-          question: Who is the world's most successful musician in history?
-          variants:
-          - Eminem
-          - Michael Jackson
-          - Madonna
-          - Bob Dylan
-          - Stevie Wonder
-          - David Bowie
-          answer: Michael Jackson
-      '2':
-          question: Which DOM attribute doesn't exist?
-          variants:
-          - addAttribute
-          - hasAttribute
-          - removeAttribute
-          answer: addAttribute
-      '3':
-          question: Which number of month was November initially?
-          variants:
-          - '2'
-          - '8'
-          - '10'
-          - '6'
-          answer: '8'
-      '4':
-          question: Who is the longest reigning monarch of the United Kingdom?
-          variants:
-          - Queen Victoria
-          - Queen Elizabeth I
-          - Queen Elizabeth II
-          - King George V
-          answer: Queen Elizabeth II
-      '5':
-          question: What makes the world go round?
-          variants:
-          - money
-          - women
-          - men
-          - governments
-          - mysticism
-          - information
-          - knowledge
-          - idiocy
-          answer: money
+    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"}
