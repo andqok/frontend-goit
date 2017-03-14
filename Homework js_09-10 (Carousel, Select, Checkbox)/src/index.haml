@@ -1,0 +1,141 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %title Document
+    %link{:href => "css/style.css", :rel => "stylesheet"}
+    %link{:href => "css/selectric.css", :rel => "stylesheet"}
+    %link{:href => "css/jquery.selectBox.css", :rel => "stylesheet"}
+    %script{:src => "https://code.jquery.com/jquery-3.1.1.min.js"}
+    %script{:src => "js/jquery.jcarousel.js"}
+    %script{:src => "js/jquery.selectric.min.js"}
+    %script{:src => "js/jquery.selectBox.js"}
+    %script{:src => "js/jquery.checkbox.js"}
+    %script{:src => "js/jquery.color.js"}
+  %body
+    .wrapper
+      %h1.heading Carousel-ka
+      %h2 done with love
+      .jcarousel-wrapper
+        .jcarousel
+          %ul
+            %li
+              %img{:src => "img/img0.jpg"}
+            %li
+              %img{:src => "img/img1.jpg"}
+            %li
+              %img{:src => "img/img2.jpg"}
+            %li
+              %img{:src => "img/img3.jpg"}
+            %li
+              %img{:src => "img/img4.jpg"}
+            %li
+              %img{:src => "img/img5.jpg"}
+            %li
+              %img{:src => "img/img6.jpg"}
+            %li
+              %img{:src => "img/img7.jpg"}
+            %li
+              %img{:src => "img/img8.png"}
+            %li
+              %img{:src => "img/img9.png"}
+        %a{:href => "#", :class => "jcarousel-control-prev inactive", :"data-jcarouselcontrol" => "true"} <
+        %a{:href => "#", :class => "jcarousel-control-next", :"data-jcarouselcontrol" => "true"} >
+        %p{:class => "jcarousel-pagination"}
+          %a{:href => "#0", :class => "active"}
+          %a{:href => "#1"}
+          %a{:href => "#2"}
+          %a{:href => "#3"}
+          %a{:href => "#4"}
+          %a{:href => "#5"}
+          %a{:href => "#6"}
+          %a{:href => "#7"}
+          %a{:href => "#8"}
+          %a{:href => "#9"}
+      .wrapper-two
+        <p>Selectric - <span id="selectric-value">value not selected</span></p>
+        %select#selectric-select
+          %option{:value => ""}
+          %option{:value => ""} Long item, lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, consectetur, repellat animi
+          %option{:value => "Value1"}Apples
+          %option{:value => "Value2"}Oranges
+          %option{:value => "Value3"}Potatoes
+          %option{:value => "Value3"}Cucumbers
+          %option{:value => "Value3"}Watermellons
+          %input#inputik
+          %button#buttonka Buttonka
+      .wrapper-three
+        <p>selectBox - </p>
+        %select#selectBox-select
+          %option{:value => ""}
+          %option{:value => ""} Long item, lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, consectetur, repellat animi
+          %option{:value => "Value1"}Marakaibo
+          %option{:value => "Value2"}Rio
+          %option{:value => "Value3"}Bogota
+          %option{:value => "Value3"}Uruguay
+          %option{:value => "Value3"}Tokio
+      .wrapper-four
+        .column-one
+          %p jQuery
+          %span.niceCheck
+            %label{:for => "check1"} Check 1
+            %input{:id  => "check1", :type => "Checkbox", :name => "ch1"}
+          %span.niceCheck
+            %label{:for => "check2"} Check 2
+            %input{:id  => "check2", :type => "Checkbox", :name => "ch2"}
+          %span.niceCheck
+            %label{:for => "check3"} Check 3
+            %input{:id  => "check3", :type => "Checkbox", :name => "ch3"}
+        .column-two
+          %p CSS
+          %span.niceCheck-imdifferent
+            %label{:for => "check1+"} Check 1
+            %input{:id  => "check1+", :type => "Checkbox", :name => "ch1+"}
+            .difference
+              %label{:for => "check1+"}◉
+          %span.niceCheck-imdifferent
+            %label{:for => "check2+"} Check 2
+            %input{:id  => "check2+", :type => "Checkbox", :name => "ch2+"}
+            .difference
+              %label{:for => "check2+"}◉
+          %span.niceCheck-imdifferent
+            %label{:for => "check3+"} Check 3
+            %input{:id  => "check3+", :type => "Checkbox", :name => "ch3+"}
+            .difference
+              %label{:for => "check3+"}◉
+      .wrapper-five
+        %nav
+          %ul
+            %li
+              %a{:href => "#"} Nav 1
+            %li
+              %a{:href => "#"} Nav 2
+            %li.dropdown
+              %a{:href => "#"} Nav 3 >>
+              %ul.sub-menu
+                %li
+                  %a{:href => "#"} Nav 3.1
+                %li
+                  %a{:href => "#"} Nav 3.2
+                %li
+                  %a{:href => "#"} Nav 3.3
+                %li.dropdown
+                  %a{:href => "#"} Nav 3.4 >>
+                  %ul.sub-menu
+                    %li
+                      %a Nav 3.4.1
+                      %li.dropdown
+                        %a{:href => "#"} Nav 3.4.2 >>
+                        %ul.sub-menu
+                          %li
+                            %a{:href => "#"} Nav 3.4.2.1
+                %li
+                  %a{:href => "#"} Nav 3.5
+            %li
+              %a{:href => "#"} Nav 4
+            %li
+              %a{:href => "#"} Nav 5
+            %li
+              %a{:href => "#"} Nav 6
+    %script{:async => "", :src => "js/script.js"}

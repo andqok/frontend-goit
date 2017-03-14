@@ -1,0 +1,308 @@
+!!!
+%html{:lang => "ru"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %title Zazor - drives you away!
+    %link{:href => "css/style.css", :rel => "stylesheet"}/
+  %body
+    .wrapper
+      / Header: TELEPHONE-LOGIN-NAVIGATION BARS
+      %header
+        .telephone-login-navigation
+          / Telephones
+          %address
+            %img.phone-image{:alt => "phone", :src => "img/icons/phone.png"}/
+            %p.telephones (044)123-45-67
+            %p.telephones.telephone-2 (044)567-89-10
+          / Authorization
+          .authorization-bar
+            %form#authorization-form.authorization-bar__form{:action => "index.html", :method => "post"}
+              %img.login-image{:alt => "", :src => "img/icons/login.png"}/
+              %input.authorization-bar__input.login-input{:type => "text"}/
+              %input.authorization-bar__input.password-input{:type => "text"}/
+              %a.authoriz-links.entrance{:href => "#", :onclick => "document.getElementById('authorization-form').submit();"} вход
+              %a.division{:href => "#"} |
+              %a.authoriz-links.registration{:href => "#"} регистрация
+              %a.authoriz-links.forgot-password{:href => "#"} забыли пароль?
+            %a.authorization-bar__registration{:href => "#", :text => "регистрация"}
+            %a.authorization-bar__forgot-pwd{:href => "#", :text => "забыли пароль?"}
+          / Navigation
+          .navigation
+            %img{:alt => "home", :src => "img/icons/home.png"}/
+            %img{:alt => "site-map", :src => "img/icons/site-map.png"}/
+            %img{:alt => "mail", :src => "img/icons/envelope.png"}/
+        / END topmost bar
+        / BANNER
+        %img.cover-image{:alt => "Cover image. Zazor drives you away!", :src => "img/zazor-drives-you-away.png"}/
+        %nav.navigation-bar
+          %ul.navigation-menu
+            %li.navigation-item
+              %a.nav_o-kompanii{:href => "#"} О компании
+            %li.navigation-item
+              %a.nav_oplata{:href => "#"} Оплата
+            %li.navigation-item
+              %a.nav_dostavka{:href => "#"} Доставка
+            %li.navigation-item
+              %a.nav_statji{:href => "#"} Статьи
+            %li.navigation-item
+              %a.nav_contacts{:href => "#"} Контакты
+            %li.navigation-item
+              %img{:alt => "", :src => ""}/
+          .cart
+            %li
+              %a.side{:href => "#"}
+                %p.cart-item
+                  %img.cart-ico{:alt => "", :src => "img/icons/cart.png"}/
+                  %span.cart__number-of-goods товаров:
+                  %span.cart__quantity 0
+            %li
+              %a.side{:href => "#"}
+                %p.cart-item
+                  %span.cart__sum-label на сумму:
+                  %span.cart__sum-number 0,00
+                  %span.cart__sum-currency грн.
+      / SEARCH BARS
+      .poisk
+        .poisk-po-avto
+          .searchbar.searchbar-first
+            %h5.searchbar__heading.heading-diski Диски:
+            %h4.searchbar__heading.heading-poisk-po-avto Поиск по автомобилю
+            %h3.searchbar__heading.heading-shiny Шины:
+          .poisk-content
+            .labels
+            .inputs
+          .poisk-content
+            .labels
+            .inputs
+          .further-search
+            %a.further-search__link{:href => "#"} поиск
+        / END Поиск по авто
+        / Поиск шин
+        .poisk-shin
+          .searchbar
+            %h4.searchbar__heading.heading-poisk-shin Поиск шин
+          .size
+          .r
+          .season
+          .further-search
+            %a.further-search__link{:href => "#"} поиск
+        / END поиск шин
+        / Поиск дисков
+        .poisk-diskov
+          .searchbar
+            %h4.searchbar__heading.heading-poisk-diskov Поиск дисков
+          .poisk-diskov__diametr-diska
+            %label{:for => "diametr"} Диаметр диска:
+            %select#diametr{:name => "", :type => "text", :value => ""}
+              %option{:value => ""}
+          .poisk-diskov__kolichestvo
+            %label{:for => "kolichestvo"} Количество крепежных отверстий:
+            %select#kolichestvo{:name => "", :type => "text", :value => ""}
+              %option{:value => ""}
+          .poisk-diskov__diametr-otverstia
+            %label{:for => "diametr-otverstia"} Диаметр расположения крепежных отверстий:
+            %select#diametr-otverstia{:name => "", :type => "text", :value => ""}
+              %option{:value => ""}
+          .further-search
+            %a.further-search__link{:href => "#"} поиск...
+        / END поиск дисков
+      / END поиск
+      .main-wrapper
+        / ASIDE-LEFT
+        %aside.aside-left
+          %header.aside-item.aside-left__header
+            %img{:alt => "icon", :src => "img/icons/aside-header-left.png"}/
+            %h2
+              Каталог продукции
+              %h2
+          %section
+            %header.aside-item.aside-left-item__section
+              %img{:alt => "icon", :src => "img/icons/disc.png"}/
+              %h2 Шины
+            %ul
+              %li.catalog__item
+                %a{:href => "#"} Наименование 1
+              %li.catalog__item
+                %a{:href => "#"} Наименование 2
+              %li.catalog__item
+                %a{:href => "#"} Наименование 3
+              %li.catalog__item
+                %a{:href => "#"} Наименование 4
+          %section
+            %header.aside-item.aside-left-item__section
+              %img{:alt => "icon", :src => "img/icons/disc.png"}/
+              %h2 Диски
+            %ul
+              %li.catalog__item
+                %a{:href => "#"} Наименование 1
+              %li.catalog__item
+                %a{:href => "#"} Наименование 2
+              %li.catalog__item
+                %a{:href => "#"} Наименование 3
+              %li.catalog__item
+                %a{:href => "#"} Наименование 4
+          %section
+            %header.aside-item.aside-left-item__section
+              %img{:alt => "icon", :src => "img/icons/disc.png"}/
+              %h2 Болты
+            %ul
+              %li.catalog__item
+                %a{:href => "#"} Наименование 1
+              %li.catalog__item
+                %a{:href => "#"} Наименование 2
+              %li.catalog__item
+                %a{:href => "#"} Наименование 3
+              %li.catalog__item
+                %a{:href => "#"} Наименование 4
+        / MAIN SECTION
+        / HERE ARE TIRES. ROW 1
+        %section.main-section
+          %a.tovar-item{:href => "#"}
+            %figure
+              %figcaption.tovar-item__brand Goodyear
+              %figcaption.tovar-item__model Ultra Grip Extreme
+              .tovar-item__image
+                %img{:alt => "", :src => "img/tire-goodyear.png"}/
+              %figcaption.tovar-item__price
+                90.00
+                %p.tovar-item__price-currency грн.
+          %a.tovar-item{:href => "#"}
+            %figure
+              %figcaption.tovar-item__brand Nokian
+              %figcaption.tovar-item__model Hakkapeliitta R
+              .tovar-item__image
+                %img{:alt => "", :src => "img/tire-nokian.png"}/
+              %figcaption.tovar-item__price
+                115.00
+                %p.tovar-item__price-currency грн.
+          %a.tovar-item{:href => "#"}
+            %figure
+              %figcaption.tovar-item__brand Hankook
+              %figcaption.tovar-item__model K 708 155/65 R14
+              .tovar-item__image
+                %img{:alt => "", :src => "img/tire-hankook.png"}/
+              %figcaption.tovar-item__price
+                393.00
+                %p.tovar-item__price-currency грн.
+          / HERE ARE TIRES. ROW 2
+          %a.tovar-item{:href => "#"}
+            %figure
+              %figcaption.tovar-item__brand Goodyear
+              %figcaption.tovar-item__model Ultra Grip Extreme
+              .tovar-item__image
+                %img{:alt => "", :src => "img/tire-goodyear.png"}/
+              %figcaption.tovar-item__price
+                90.00
+                %p.tovar-item__price-currency грн.
+          %a.tovar-item{:href => "#"}
+            %figure
+              %figcaption.tovar-item__brand Nokian
+              %figcaption.tovar-item__model Hakkapeliitta R
+              .tovar-item__image
+                %img{:alt => "", :src => "img/tire-nokian.png"}/
+              %figcaption.tovar-item__price
+                115.00
+                %p.tovar-item__price-currency грн.
+          %a.tovar-item{:href => "#"}
+            %figure
+              %figcaption.tovar-item__brand Hankook
+              %figcaption.tovar-item__model K 708 155/65 R14
+              .tovar-item__image
+                %img{:alt => "", :src => "img/tire-hankook.png"}/
+              %figcaption.tovar-item__price
+                393.00
+                %p.tovar-item__price-currency грн.
+          / HERE ARE TIRES. ROW 3
+          %a.tovar-item{:href => "#"}
+            %figure
+              %figcaption.tovar-item__brand Goodyear
+              %figcaption.tovar-item__model Ultra Grip Extreme
+              .tovar-item__image
+                %img{:alt => "", :src => "img/tire-goodyear.png"}/
+              %figcaption.tovar-item__price
+                90.00
+                %p.tovar-item__price-currency грн.
+          %a.tovar-item{:href => "#"}
+            %figure
+              %figcaption.tovar-item__brand Nokian
+              %figcaption.tovar-item__model Hakkapeliitta R
+              .tovar-item__image
+                %img{:alt => "", :src => "img/tire-nokian.png"}/
+              %figcaption.tovar-item__price
+                115.00
+                %p.tovar-item__price-currency грн.
+          %a.tovar-item{:href => "#"}
+            %figure
+              %figcaption.tovar-item__brand Hankook
+              %figcaption.tovar-item__model K 708 155/65 R14
+              .tovar-item__image
+                %img{:alt => "", :src => "img/tire-hankook.png"}/
+              %figcaption.tovar-item__price
+                393.00
+                %p.tovar-item__price-currency грн.
+        / ASIDE-LEFT
+        %aside.aside-right
+          %header.aside-item.aside-right__header
+            %img{:alt => "icon", :src => "img/icons/aside-header-right.png"}/
+            %h2
+              Бренды:
+              %h2
+          %form{:action => "index.html", :method => "post"}
+            %fieldset
+              %header.aside-item.aside-right-item__section
+                %img{:alt => "icon", :src => "img/icons/disc.png"}/
+                %h2 Шины
+              %p.aside-right__item
+                %input#tires-brand-1{:type => "checkbox", :value => ""}/
+                %label{:for => "tires-brand-1"} Бренд 1
+              %p.aside-right__item
+                %input#tires-brand-2{:type => "checkbox", :value => ""}/
+                %label{:for => "tires-brand-2"} Бренд 2
+              %p.aside-right__item
+                %input#tires-brand-3{:type => "checkbox", :value => ""}/
+                %label{:for => "tires-brand-3"} Бренд 3
+            %fieldset
+              %header.aside-item.aside-right-item__section
+                %img{:alt => "icon", :src => "img/icons/disc.png"}/
+                %h2 Диски
+              %p.aside-right__item
+                %input#disk-brand-1{:type => "checkbox", :value => ""}/
+                %label{:for => "disk-brand-1"} Бренд 1
+              %p.aside-right__item
+                %input#disk-brand-2{:type => "checkbox", :value => ""}/
+                %label{:for => "disk-brand-2"} Бренд 2
+              %p.aside-right__item
+                %input#disk-brand-3{:type => "checkbox", :value => ""}/
+                %label{:for => "disk-brand-3"} Бренд 3
+            %input{:name => "", :type => "submit", :value => "ВЫБРАТЬ"}/
+      / FOOTER
+      %footer
+        .brands
+          /
+            Бренды названы по номерам для сохраниния порядка,
+            но мне кажется нужным назвать файл и по названию бренда. Например, их так легче заменить
+          %a{:href => "#"}
+            %img{:alt => "Toyo Tires", :src => "img/brands/08-toyo.png"}/
+          %a{:href => "#"}
+            %img{:alt => "Bridgestone", :src => "img/brands/07-bridgestone.png"}/
+          %a{:href => "#"}
+            %img{:alt => "Roemers Tire Factory", :src => "img/brands/06-roemers_tire_factory.png"}/
+          %a{:href => "#"}
+            %img{:alt => "Avon Tires", :src => "img/brands/05-avon.png"}/
+          %a{:href => "#"}
+            %img{:alt => "Cooper Tires", :src => "img/brands/04-cooper.png"}/
+          %a{:href => "#"}
+            %img{:alt => "Pirelli", :src => "img/brands/03-pirelli.png"}/
+          %a{:href => "#"}
+            %img{:alt => "Continental", :src => "img/brands/02-continental.png"}/
+          %a{:href => "#"}
+            %img{:alt => "Dunlop", :src => "img/brands/01-dunlop.png"}/
+        .footer__bottom-half
+          %section.about
+            %a.about-items{:href => "#"} О компании
+            %a.about-items{:href => "#"} Доставка
+            %a.about-items{:href => "#"} Статьи
+            %a.about-items{:href => "#"} Контакты
+            %p.creators Создание сайта (с) Global Vision
+    / Wrapper ended

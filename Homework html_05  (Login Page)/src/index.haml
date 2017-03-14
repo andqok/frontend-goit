@@ -1,0 +1,54 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %title Document
+    %link{:href => "css/style.css", :rel => "stylesheet"}/
+  %body
+    .navbar
+      %ul.navbar__ul
+        %li.navbar__li.navbar__youbike
+          %a.navbar__a{:href => "#"} Meu YouBike
+        %li.navbar__li.navbar__vender
+          %a.navbar__a{:href => "#"} Vender
+        %li.navbar__li.navbar__forum
+          %a.navbar__a{:href => "#"} Forum
+        %li.navbar__li.navbar__contato
+          %a.navbar__a.contato-text{:href => "#"} Contato
+        %li.navbar__li.navbar__ajuda
+          %a.navbar__a.ajuda-text{:href => "#"} Ajuda
+        /
+          <li class="navbar__li inventicon">
+          <img src="img/inventicons.png" alt="Flag"></li>
+        %li.navbar__li.navbar__minhas-ofertas
+          %a.navbar__a{:href => "#"} Minhas Ofertas
+        %li.navbar__li.register.navbar__ola
+          %a.navbar__a.ola-text{:href => "#"}
+            Ola!
+            %span.underline Entrar
+            ou
+            %span.underline Cadaster-se
+    .form
+      .title
+        %p.cadaster-se Cadaster-se
+      .body
+        %div
+          %form{:action => "#", :method => "post"}
+            %a{:href => "#"}
+              %img.fb{:alt => "facebookAPI", :src => "img/facebook.png"}/
+            .ou
+              %span.text-form2 OU
+            %input.input__text{:name => "FirstName", :placeholder => "First Name", :required => "", :type => "text"}/
+            %input.input__text{:name => "LastName", :placeholder => "Last Name", :type => "text"}/
+            %input.input__text{:name => "EmailAddress", :placeholder => "Email Address", :required => "", :type => "email"}/
+            %input.input__text{:name => "ChoosePassword", :placeholder => "Choose Password", :required => "", :type => "password"}/
+            %input.input__text{:name => "PasswordConfirm", :placeholder => "Password Confirm", :required => "", :type => "password"}/
+            .check
+              %input#check{:type => "checkbox"}/
+              %label.text-form4{:for => "check"} Send me Youbike updates and tips
+            %input.btn{:name => "password", :type => "Submit", :value => "Create my Account"}/
+        %p.text-form3
+          By clicking the button above, you agree to the Terms of Service
+          %br/
+          Xiew our Privacy Policy.
