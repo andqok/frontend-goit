@@ -16,7 +16,7 @@ $(document).ready( function() {
         $( ".test-view"        ).css( "cursor" , "default" );
         $( ".take-test-button" ).remove();
         $( ".test-view"        ).animate({
-          height: "300px",
+          height: "400px",
         }, 500)
         $('#questions').removeClass("hidden");
       });
@@ -69,22 +69,22 @@ $(document).ready( function() {
   })(); // END mainProcedure
 
   function waitForInput( questions, index, trackRecord ) {           // after templating is done, listeners should be set
-    $( "#submit" ).click(function( event ) {
+    $( "#submit" ).click(function() {
       let chbx_id = $( 'input[name=checkbx]:checked' ).attr( 'id' );
         if ( checkAnswer( chbx_id.slice( -1 ) ) == true ) {
           $('#failure').addClass(   "hidden");
           $('#success').removeClass("hidden");
           setTimeout(function() {
             $('#success').addClass("hidden");
-          }, 1500)
+          }, 800)
           setTimeout(function() {
             nextQuestion(  questions, ++index, trackRecord  );
-          }, 2000)
+          }, 800)
         } else {
             $('#failure').removeClass("hidden");
             setTimeout(function() {
               $('#failure').addClass("hidden");
-            }, 1500)
+            }, 800)
         }
     
     function checkAnswer( answer ) {
@@ -140,11 +140,13 @@ $(document).ready( function() {
       console.log( trackRecord );
       $( '#questions' ).remove();
       const   button = document.createElement( "button" );
-      button.innerHTML = '<button id="results" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> Show results</button>'
+      button.innerHTML = '<button id="results" type="button" class="btn btn-primary btn-lg"> Show results</button>'
       const testView = document.getElementById( "tost"  );
       testView.appendChild( button );
 
-      
+      $('#results').click(function() {
+        $('#myModal').modal('show');
+      })
     }
 });
 

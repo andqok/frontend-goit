@@ -10,15 +10,14 @@
       %p.instructions Instructions: just press buttons! Test takes 5 questions, beauty.
       .test-view#tost
         %h3.take-test-button Take the test!
-    .modal.fade{:role => "dialog", :tabindex => "-1"}
+    .modal.fade{:id => "myModal", :role => "dialog", :tabindex => "-1"}
       .modal-dialog{:role => "document"}
         .modal-content
           .modal-header
             %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
               %span{"aria-hidden" => "true"} &#215;
-            %h4.modal-title Modal title
+            %h4.modal-title So, you've finished
           .modal-body
-            %p One fine body&#8230;
           .modal-footer
             %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
             %button.btn.btn-primary{:type => "button"} Save changes
