@@ -7,7 +7,7 @@ $(document).ready( function() {
     setStartClick();
     writeToLocalStorage();
     let questions = JSON.parse( localStorage.getItem( "questions" ) );
-    nextQuestion( questions, 1 , makeTrackRecordObject() );
+    nextQuestion( questions, 1 , makeTrackRecordObject ( questions )  );
     $( '#questions' ).addClass( "hidden" );
 
     function setStartClick() {
@@ -21,14 +21,6 @@ $(document).ready( function() {
         $('#questions').removeClass("hidden");
       });
     } 
-
-    function makeTrackRecordObject() {
-      let b = {};
-      Object.keys(questions).forEach(function(x) {
-        b[x] = {fauxAttempts: 0};
-      })
-      return b    // Perhaps shorter...? 5 lines, yo
-    }
 
     function writeToLocalStorage () {
       let questions = {
@@ -68,22 +60,31 @@ $(document).ready( function() {
   };   // END writeToLocalStorage()
   })(); // END mainProcedure
 
+  function makeTrackRecordObject( questions ) {
+    let b = {};
+    Object.keys(questions).forEach(function(x) {
+      b[x] = {fauxAttempts: 0};
+    })
+    return b    // Perhaps shorter...? 5 lines, yo
+  }
+
   function waitForInput( questions, index, trackRecord ) {           // after templating is done, listeners should be set
     $( "#submit" ).click(function() {
       let chbx_id = $( 'input[name=checkbx]:checked' ).attr( 'id' );
         if ( checkAnswer( chbx_id.slice( -1 ) ) == true ) {
-          $('#failure').addClass(   "hidden");
-          $('#success').removeClass("hidden");
+          $('#failure').addClass(    "hidden" );
+          $('#success').removeClass( "hidden" );
+
           setTimeout(function() {
-            $('#success').addClass("hidden");
+            $('#success').addClass(  "hidden" );
           }, 800)
           setTimeout(function() {
             nextQuestion(  questions, ++index, trackRecord  );
           }, 800)
         } else {
-            $('#failure').removeClass("hidden");
+            $('#failure').removeClass( "hidden" );
             setTimeout(function() {
-              $('#failure').addClass("hidden");
+              $('#failure').addClass(  "hidden" );
             }, 800)
         }
     
@@ -105,19 +106,24 @@ $(document).ready( function() {
   
   function nextQuestion( questions, index, trackRecord ) {
     if ( index > Object.keys( questions ).length ) {
-      finishTheOrdeal( trackRecord );
+      finishTheOrdeal( questions, index, trackRecord );
     } else {
       checkIfCleared();
       appendTemplate();
-      waitForInput(        questions, index, trackRecord );
+      waitForInput( questions, index, trackRecord );
     }
 
     function checkIfCleared() {
-      if (document.getElementById('questions') !== null) {
+      if (document.getElementById( 'questions'  ) !== null) {
         $( '#questions' ).remove();
-      } else {
-        } 
       }
+      if (document.getElementById( 'modal-body' ) !== null) {
+        $( '#modal-body' ).remove();
+      }
+      if (document.getElementById( 'results'    ) !== null) {
+        $( '#results' ).remove();
+      }
+    }
 
     function appendTemplate() {
       const      questionView = document.createElement(  "div"  );
@@ -134,18 +140,31 @@ $(document).ready( function() {
         return   _.template( template )( questions[index]);
       }
     }
-  }  // END nextOuestion()
+  }  // END nextQuestion()
 
-    function finishTheOrdeal( trackRecord ) {
-      console.log( trackRecord );
+    function finishTheOrdeal( questions, index, trackRecord ) {
       $( '#questions' ).remove();
-      const   button = document.createElement( "button" );
-      button.innerHTML = '<button id="results" type="button" class="btn btn-primary btn-lg"> Show results</button>'
-      const testView = document.getElementById( "tost"  );
+      const        button = document.createElement( "button" );
+      const      testView = document.getElementById( "tost"  );
+      const         modal = document.getElementById( "modalbody");
+      button.innerHTML    = '<button id="results" type="button" class="btn btn-primary btn-lg"> Show results</button>'
       testView.appendChild( button );
+      let     trueAnswers = 0;
+      const answersAmount = Object.keys( trackRecord ).length;
+      for (let i = 1; i <= answersAmount; i++) {
+        if ( trackRecord[ i.toString() ].fauxAttempts === 0) {
+          trueAnswers++;
+        }
+      }
+      modal.innerHTML = '<p> True answers: ' + trueAnswers + ' of ' + answersAmount + '</p>';
 
-      $('#results').click(function() {
-        $('#myModal').modal('show');
+      $( '#results' ).click( function() {
+      $( '#myModal' ).modal( 'show' );
+      })
+
+      $( '#reload' ).click(function(){
+        $('#myModal').modal( 'hide' )
+        nextQuestion( questions, 1, makeTrackRecordObject( questions ) );
       })
     }
 });
