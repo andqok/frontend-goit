@@ -53,4 +53,4 @@ gulp.task('browserSync', function() {
 gulp.task('default', ['haml', 'sass', 'minify', 'browserSync']);
 gulp.watch('src/index.haml', ['haml']);
 gulp.watch('src/sass/style.sass', ['sass']);
-gulp.watch('src/js/*.js', ['minify']);
+gulp.watch('src/js/script.js', ['minify']);

@@ -1,12 +1,11 @@
-'use strict;'
-
+"use strict";
 $(document).ready( function() {
 
   (function   mainProcedure() {
 
     setStartClick();
     writeToLocalStorage();
-    let questions = JSON.parse( localStorage.getItem( "questions" ) );
+    let questions = JSON.parse( localStorage.getItem( "questions" )   );
     nextQuestion( questions, 1 , makeTrackRecordObject ( questions )  );
     $( '#questions' ).addClass( "hidden" );
 
@@ -16,14 +15,14 @@ $(document).ready( function() {
         $( ".test-view"        ).css( "cursor" , "default" );
         $( ".take-test-button" ).remove();
         $( ".test-view"        ).animate({
-          height: "400px",
-        }, 500)
+          height: "400px"
+        }, 500);
         $('#questions').removeClass("hidden");
       });
-    } 
+    }
 
     function writeToLocalStorage () {
-      let questions = {
+      let questions$wtls = {
       "1": {
         question: "Who is the world's most successful musician in history?",
         variants: ["Eminem", "Michael Jackson", "Madonna", "Bob Dylan", "Stevie Wonder", "David Bowie"],
@@ -50,25 +49,24 @@ $(document).ready( function() {
         answer:   "money"
       }
     };
-  
     try {
-      localStorage.setItem( "questions", JSON.stringify( questions ) );
+      localStorage.setItem( "questions", JSON.stringify( questions$wtls ) );
     } catch  ( e ) {
         alert( 'Something went wrong! ' + e );
         return false;
     }
-  };   // END writeToLocalStorage()
-  })(); // END mainProcedure
+  }
+  })();
 
   function makeTrackRecordObject( questions ) {
-    let b = {};
+    let b  = {};
     Object.keys(questions).forEach(function(x) {
       b[x] = {fauxAttempts: 0};
-    })
-    return b    // Perhaps shorter...? 5 lines, yo
+    });
+    return b;
   }
 
-  function waitForInput( questions, index, trackRecord ) {           // after templating is done, listeners should be set
+  function waitForInput( questions, index, trackRecord ) {
     $( "#submit" ).click(function() {
       let chbx_id = $( 'input[name=checkbx]:checked' ).attr( 'id' );
         if ( checkAnswer( chbx_id.slice( -1 ) ) == true ) {
@@ -77,33 +75,33 @@ $(document).ready( function() {
 
           setTimeout(function() {
             $('#success').addClass(  "hidden" );
-          }, 800)
+          }, 800);
           setTimeout(function() {
-            nextQuestion(  questions, ++index, trackRecord  );
-          }, 800)
+            nextQuestion(  questions, index + 1, trackRecord  );
+          }, 800);
         } else {
             $('#failure').removeClass( "hidden" );
             setTimeout(function() {
               $('#failure').addClass(  "hidden" );
-            }, 800)
+            }, 800);
         }
-    
+
     function checkAnswer( answer ) {
-      if ( getTrueAnswerNumber( answer ) == answer ) {
-          return true
+      if ( getTrueAnswerNumber() == answer ) {
+          return true;
       } else {
           trackRecord[ index.toString() ].fauxAttempts  += 1;
-          return false
-      };
-  
+          return false;
+      }
+
       function getTrueAnswerNumber() {
         let question = questions[ index ];
-        return question.variants.indexOf( question.answer ); 
+        return question.variants.indexOf( question.answer );
         }
-      } // END checkAnswer
-    }); // END click handler()
-  }     // END waitForInput()
-  
+      }
+    });
+  }
+
   function nextQuestion( questions, index, trackRecord ) {
     if ( index > Object.keys( questions ).length ) {
       finishTheOrdeal( questions, index, trackRecord );
@@ -114,58 +112,51 @@ $(document).ready( function() {
     }
 
     function checkIfCleared() {
-      if (document.getElementById( 'questions'  ) !== null) {
-        $( '#questions' ).remove();
-      }
-      if (document.getElementById( 'modal-body' ) !== null) {
-        $( '#modal-body' ).remove();
-      }
-      if (document.getElementById( 'results'    ) !== null) {
-        $( '#results' ).remove();
-      }
+      let toDeletion = ['questions', 'modal-body', 'results'];
+      toDeletion.forEach( function(argument) {
+        if (document.getElementById( argument  ) !== null) {
+          $( '#' + argument ).remove();
+        }
+      })
     }
 
     function appendTemplate() {
       const      questionView = document.createElement(  "div"  );
       const          testView = document.getElementById( "tost" );
-      $.extend(  questionView, { innerHTML: cookTemplate(), id: "questions" })
+      $.extend(  questionView, { innerHTML: cookTemplate(), id: "questions" });
       testView.appendChild( questionView );
 
       function cookTemplate() {
-        const template = '<h2><%=question%></h2> \
-        <table> <% for (let i=0; i<variants.length; i++) { %> \
-        <tr> <td> <input class="checkbox" name="checkbx" type="radio" id="chbx-<%=i%>"> </td> \
-        <td> <label class="checkbox-label" for="chbx-<%=i%>"><%=variants[i]%></label> </td> </tr> <% } %> </table> \
-        <button id="submit" type="button" class="btn btn-primary btn-lg">Submeat</button>'
+        const template = '<h2><%=question%></h2><table> <% for (let i=0; i<variants.length; i += 1) { %><tr> <td> <input class="checkbox" name="checkbx" type="radio" id="chbx-<%=i%>"> </td> <td> <label class="checkbox-label" for="chbx-<%=i%>"><%=variants[i]%></label> </td> </tr> <% } %> </table> <button id="submit" type="button" class="btn btn-primary btn-lg">Submeat</button>';
         return   _.template( template )( questions[index]);
       }
     }
-  }  // END nextQuestion()
+  }
 
-    function finishTheOrdeal( questions, index, trackRecord ) {
-      $( '#questions' ).remove();
-      const        button = document.createElement( "button" );
-      const      testView = document.getElementById( "tost"  );
-      const         modal = document.getElementById( "modalbody");
-      button.innerHTML    = '<button id="results" type="button" class="btn btn-primary btn-lg"> Show results</button>'
-      testView.appendChild( button );
-      let     trueAnswers = 0;
-      const answersAmount = Object.keys( trackRecord ).length;
-      for (let i = 1; i <= answersAmount; i++) {
-        if ( trackRecord[ i.toString() ].fauxAttempts === 0) {
-          trueAnswers++;
-        }
+  function finishTheOrdeal( questions, index, trackRecord ) {
+    $( '#questions' ).remove();
+    const        button = document.createElement( "button" );
+    const      testView = document.getElementById( "tost"  );
+    const         modal = document.getElementById( "modalbody");
+    button.innerHTML    = '<button id="results" type="button" class="btn btn-primary btn-lg"> Show results</button>';
+    testView.appendChild( button );
+    let     trueAnswers = 0;
+    const answersAmount = Object.keys( trackRecord ).length;
+    for (let i = 1; i  <= answersAmount; i += 1) {
+      if ( trackRecord[ i.toString() ].fauxAttempts === 0) {
+        trueAnswers    += 1;
       }
-      modal.innerHTML = '<p> True answers: ' + trueAnswers + ' of ' + answersAmount + '</p>';
-
-      $( '#results' ).click( function() {
-      $( '#myModal' ).modal( 'show' );
-      })
-
-      $( '#reload' ).click(function(){
-        $('#myModal').modal( 'hide' )
-        nextQuestion( questions, 1, makeTrackRecordObject( questions ) );
-      })
     }
+    modal.innerHTML = '<p> True answers: ' + trueAnswers + ' of ' + answersAmount + '</p>';
+
+    $( '#results' ).click( function() {
+    $( '#myModal' ).modal( 'show' );
+    })
+
+    $( '#reload' ).click(function(){
+      $('#myModal').modal( 'hide' )
+      nextQuestion( questions, 1, makeTrackRecordObject( questions ) );
+    })
+  }
 });
 

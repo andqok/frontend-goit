@@ -1,23 +1,25 @@
+$border: 1px solid #128aa7
+
 *
-  margin: 0
-  padding: 0
-  list-style-type: none
+  margin         : 0
+  padding        : 0
   text-decoration: none
 
 body
-  height: 100vh
   background-color: #128aa7
-  height: 100%
-  font-family: sans-serif
+  font-family     : sans-serif
 
-.wrapper
-  height: 100%
+.wrap
+  width           : 1000px
+  margin          : auto
+  box-shadow      : 0 2px 15px 0 rgba(0, 0, 0, 0.7)
+  background-color: #fff
 
 .header
-  display: block
-  color: #128aa7
-  font-size: 12px
-  height: 174px
+  display   : block
+  color     : #128aa7
+  font-size : 12px
+  height    : 174px
   background: rgba(18, 137, 167, 1)
   background: -moz-linear-gradient(top, rgba(18, 137, 167, 1) 0%, rgba(18, 137, 167, 1) 17%, rgba(63, 195, 210, 1) 17%, rgba(63, 195, 210, 1) 20%, rgba(63, 195, 210, 1) 27%, rgba(255, 255, 255, 1) 100%)
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18, 137, 167, 1)), color-stop(17%, rgba(18, 137, 167, 1)), color-stop(17%, rgba(63, 195, 210, 1)), color-stop(20%, rgba(63, 195, 210, 1)), color-stop(27%, rgba(63, 195, 210, 1)), color-stop(100%, rgba(255, 255, 255, 1)))
@@ -25,34 +27,19 @@ body
   background: -o-linear-gradient(top, rgba(18, 137, 167, 1) 0%, rgba(18, 137, 167, 1) 17%, rgba(63, 195, 210, 1) 17%, rgba(63, 195, 210, 1) 20%, rgba(63, 195, 210, 1) 27%, rgba(255, 255, 255, 1) 100%)
   background: -ms-linear-gradient(top, rgba(18, 137, 167, 1) 0%, rgba(18, 137, 167, 1) 17%, rgba(63, 195, 210, 1) 17%, rgba(63, 195, 210, 1) 20%, rgba(63, 195, 210, 1) 27%, rgba(255, 255, 255, 1) 100%)
   background: linear-gradient(to bottom, rgba(18, 137, 167, 1) 0%, rgba(18, 137, 167, 1) 17%, rgba(63, 195, 210, 1) 17%, rgba(63, 195, 210, 1) 20%, rgba(63, 195, 210, 1) 27%, rgba(255, 255, 255, 1) 100%)
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1289a7', endColorstr='#ffffff', GradientType=0 )
+  filter    : progid:DXImageTransform.Microsoft.gradient( startColorstr='#1289a7', endColorstr='#ffffff', GradientType=0 )
 
+  .wrap
+    height  : 175px
+    
 section
-  &.wrap
-    display: block
-    height: 848px
-    background: #3fc4d2
-    background: linear-gradient(to bottom, #3fc4d2 0%, #0c739f 100%)
+  display   : block
+  height    : 848px
+  background: #3fc4d2
+  background: linear-gradient(to bottom, #3fc4d2 0%, #0c739f 100%)
 
-  .section_content
-    width: 1000px
-    height: 800px
-    margin: auto
-    background-color: #ffffff
+  .wrap
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.7)
-
-.header_content
-  width: 1000px
-  height: 175px
-  margin: auto
-  background-color: #ffffff
-  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.7)
-
-.copyright
-  margin: 15px
-  font-family: 'Tahoma'
-  text-align: center
-  color: #ffffff
 
 .logo
   position: absolute
@@ -100,8 +87,8 @@ section
     color: #128aa7
 
 .beach
-  border-top: 1px solid #128aa7
-  border-bottom: 1px solid #128aa7
+  border-top   : $border
+  border-bottom: $border
 
 .arrow
   font-size: 12px
@@ -144,18 +131,18 @@ section
   display: block
 
 .sidebar_left
-  float: left
   width: 209px
   height: 527px
   background-color: #edeef0
-  overflow: hidden
+//  float: left
+//  overflow: hidden
 
 .sidebar_right
-  float: right
   width: 209px
   height: 527px
   background-color: #edeef0
-  overflow: hidden
+//  float: right
+//  overflow: hidden
 
 .sidebar_item
   line-height: 1.5
@@ -165,11 +152,15 @@ section
   margin-top: 4px
   font-size: 14px
 
-h3
-  text-align: center
-  padding: 5px
-  color: #424c43
-  margin-top: 4px
+  .info
+    text-align: center
+    padding: 5px
+    color: #424c43
+    margin-top: 4px
 
 .copyright
+  margin     : 15px
   font-family: sans-serif
+  font-family: 'Tahoma'
+  text-align : center
+  color      : #fff
