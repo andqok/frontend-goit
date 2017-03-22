@@ -1,10 +1,10 @@
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none; }
+  text-decoration: none;
+  list-style-type: none; }
 
 body {
-  background-color: #128aa7;
   font-family: sans-serif; }
 
 .wrap {
@@ -37,20 +37,23 @@ section {
   section .wrap {
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.7); }
 
+.logo, .trips_asia {
+  position: absolute; }
+
 .logo {
-  position: absolute;
   float: left;
   padding-left: 25px;
   margin-top: 10px;
   height: 177px; }
 
 .trips_asia {
-  position: absolute;
   padding-top: 110px;
   padding-left: 100px; }
 
+.contacts, .countries {
+  float: right; }
+
 .contacts {
-  float: right;
   padding-top: 8px;
   padding-right: 32px;
   padding-left: 12px;
@@ -65,16 +68,12 @@ section {
 .countries {
   display: flex;
   height: 65px;
-  float: right;
   padding-top: 25px;
   margin-right: 18px;
   clear: both; }
 
 .country_image {
-  display: block;
-  float: right;
-  width: 70px;
-  text-align: center; }
+  width: 70px; }
   .country_image a {
     display: block;
     text-align: center;
@@ -88,66 +87,69 @@ section {
   font-size: 12px; }
 
 .menu {
-  display: inline-block;
   width: 1000px;
-  height: 30px;
   margin-top: -4px;
   border-top: 1px solid #cacbcb;
   border-bottom: 1px solid #000;
   background-color: #323232;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.75); }
-
-.menu_item {
-  position: relative;
-  width: 135px;
-  height: 30px;
-  text-align: center;
-  display: inline-block; }
-  .menu_item a {
-    color: white;
-    font-size: 14px;
-    line-height: 30px;
-    display: block; }
-
-.submenu {
-  display: none;
-  width: inherit;
-  left: 0;
-  position: absolute;
-  background: #303030;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6); }
-  .submenu a {
-    display: block; }
+  .menu .menu_item {
+    display: inline-block;
+    position: relative;
+    width: 135px;
+    height: 30px;
+    text-align: center; }
+    .menu .menu_item a {
+      display: block;
+      color: white;
+      font-size: 14px;
+      line-height: 30px; }
+    .menu .menu_item .submenu {
+      display: none;
+      position: absolute;
+      width: inherit;
+      left: 0;
+      background: #303030;
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6); }
+      .menu .menu_item .submenu a {
+        display: block; }
 
 .menu_item:hover .submenu {
-  display: block; }
+  display: block;
+  z-index: 1; }
+
+.wrapper-dedushka {
+  display: flex;
+  flex-direction: column; }
+
+.wrapper-otetz {
+  display: flex;
+  flex: 1; }
+
+.content_center {
+  flex: 1; }
+
+.sidebar_left, .sidebar_right {
+  width: 209px;
+  background-color: #edeef0; }
 
 .sidebar_left {
-  width: 209px;
-  height: 527px;
-  background-color: #edeef0; }
-
-.sidebar_right {
-  width: 209px;
-  height: 527px;
-  background-color: #edeef0; }
+  order: -1; }
 
 .sidebar_item {
+  position: relative;
   line-height: 1.5;
   margin-left: 15px;
-  position: relative;
   color: #424c43;
   margin-top: 4px;
   font-size: 14px; }
-  .sidebar_item .info {
-    text-align: center;
-    padding: 5px;
-    color: #424c43;
-    margin-top: 4px; }
+
+.info {
+  text-align: center;
+  line-height: 35px; }
 
 .copyright {
   margin: 15px;
   font-family: sans-serif;
-  font-family: 'Tahoma';
   text-align: center;
   color: #fff; }

@@ -10,7 +10,8 @@ var paths       = {
 
 gulp.task('haml', function () {
     gulp.src('src/index.haml')
-    .pipe(haml())
+    .pipe(haml()
+    .on('error', function(e) { console.log(e.message); }))
     .pipe(gulp.dest('dist'))
     .pipe(reload({stream:true}));
 });

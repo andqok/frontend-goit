@@ -1,3 +1,4 @@
+require('cache-require-paths');
 var gulp        = require('gulp');
 var haml        = require('gulp-ruby-haml');
 var sass        = require('gulp-sass');

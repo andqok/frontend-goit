@@ -10,7 +10,7 @@
       .wrapper
         .navbar
           %a{:href => "#"}
-            %span.heading-text.logo-header-text__pingbull Pingbulld
+            %span.heading-text.logo-header-text__pingbull Pingbull
             %span.heading-text.logo-header-text__er er
           %ul.navbar-top
             %li
@@ -29,66 +29,88 @@
         %a.carousel-btn-prev{:href => "#"}
           %img{:alt => "", :src => "img/arrow.png"}
         .wrapper
-          %article.main-article
+          %article.col.main-article
             %h2.heading-text.main-heading_1 Lorem Ipsum Dolor
             %h3.heading-text.main-heading_2 It will make all of your dreams come
             %p.ordinary-text.main-text Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobortis.
-          %div
-            %img{:alt => "", :src => ""}/
+          .col.tovar
+            %img{:alt => "", :class => "iphone-big", :src => "../img/768px/iPhone_4_768px.png"}/
+            %img{:alt => "", :class => "iphone-small", :src => "../img/768px/iPhone_4-blur_768px.png"}/
         %a.carousel-btn-next{:href => "#"}
           %img{:alt => "", :src => "img/arrow.png"}
     .section__about-our-company
       .wrapper
-        %article.about-article
-          %img{:alt => "", :src => ""}/
-          %h2.heading-text.about-heading About our company
-          %p.ordinary-text.about-text Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae
-          %p.heading-text.about_read-more Read more
-        %article.about-article
-          %img{:alt => "", :src => ""}/
-          %h2.heading-text.about-heading About our company
-          %p.ordinary-text.about-text Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae
-          %p.heading-text.about_read-more Read more
-        %article.about-article
-          %img{:alt => "", :src => ""}/
-          %h2.heading-text.about-heading About our company
-          %p.ordinary-text.about-text Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae
-          %p.heading-text.about_read-more Read more
+        %article.col.about-article
+          .icon
+            .icon-background-1
+          .article-content
+            %h2.heading-text.about-heading About our company
+            %p.ordinary-text.about-text Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae
+            %p.heading-text.about_read-more Read more
+        %article.col.about-article
+          .icon
+            .icon-background-2
+          .article-content
+            %h2.heading-text.about-heading About our company
+            %p.ordinary-text.about-text Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae
+            %p.heading-text.about_read-more Read more
+        %article.col.about-article
+          .icon
+            .icon-background-3
+          .article-content
+            %h2.heading-text.about-heading About our company
+            %p.ordinary-text.about-text Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae
+            %p.heading-text.about_read-more Read more
     .testimonials-and-updates
       .wrapper
-        %article.testimonials
-        %img{:alt => "", :src => ""}/
-        %h2
-          %span.heading-text.testimonials-text__pingbuller Pingbuller
-          %span.heading-text.testimonials-text__starts-here starts here
-        %p.ordinary-text.testimonials-text_article “Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”
-        %section.recent-updates
-          %h2.heading-text.textimonials-pingbuller Recent updates
-          %article.updates__article
+        .col.col-6
+          %article.testimonials
             %img{:alt => "", :src => ""}/
-            %h3.ordinary-text.update-item_title Nunc turpis neque feugiat eget
-            %p.ordinary-text.update-item_time Posted by Admin on March 13 2012 in Recent News
-          %article.updates__article
-            %img{:alt => "", :src => ""}/
-            %h3.ordinary-text.update-item_title Nunc turpis neque feugiat eget
-            %p.ordinary-text.update-item_time Posted by Admin on March 13 2012 in Recent News
-          %article.updates__article
-            %img{:alt => "", :src => ""}/
-            %h3.ordinary-text.update-item_title Nunc turpis neque feugiat eget
-            %p.ordinary-text.update-item_time Posted by Admin on March 13 2012 in Recent News
+            %h2
+              %span.heading-text.testimonials-text__pingbuller Pingbuller
+              %span.heading-text.testimonials-text__starts-here starts here
+            %p.ordinary-text.testimonials-text_article “Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”
+        .col.col-6
+          %section.recent-updates
+            %h2.heading-text.testimonials-pingbuller Recent updates
+            %article.ar1
+              %img{:alt => "", :src => ""}/
+              %h3.ordinary-text.update-item_title Nunc turpis neque feugiat eget
+              %p.ordinary-text.update-item_time Posted by Admin on March 13 2012 in Recent News
+            %article.ar2
+              %img{:alt => "", :src => ""}/
+              %h3.ordinary-text.update-item_title Nunc turpis neque feugiat eget
+              %p.ordinary-text.update-item_time Posted by Admin on March 13 2012 in Recent News
+            %article.ar3
+              %img{:alt => "", :src => ""}/
+              %h3.ordinary-text.update-item_title Nunc turpis neque feugiat eget
+              %p.ordinary-text.update-item_time Posted by Admin on March 13 2012 in Recent News
     .logos
+      .wrapper
+        .logo-1
+        .logo-2
+        .logo-3
+        .logo-4
+        .logo-5
+        .logo-6
     .recent-comments-new-categories
       .wrapper
-        .footer__column
+        .col.col-4.hide-at-768px
           %h2
             %span.heading-text.logo-footer-text__pingbull Pingbull
             %span.heading-text.logo-footer-text__er er
           %p.copyright Copyright 2013, Pingbull AS
           %p.ordinary-text.footer__article Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque
-        .footer__column
+        .col.col-4
           %h2.heading-text.footer__heading Recent comments
           %p.ordinary-text.footer__article Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis
-        .footer__column
+        .col.col-4
+          %h2.heading-text.footer__heading News categories
+          %p.ordinary-text.footer__article Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis
+        .col.col-4.show-at-768px
+          %h2.heading-text.footer__heading News categories
+          %p.ordinary-text.footer__article Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis
+        .col.col-4.show-at-768px
           %h2.heading-text.footer__heading News categories
           %p.ordinary-text.footer__article Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis
     .section__footer

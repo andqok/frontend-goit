@@ -30,7 +30,8 @@ gulp.task('browserSync', function() {
     },
     port: 8080,
     open: true,
-    notify: false
+    notify: false,
+    online: true
   });
 });
 

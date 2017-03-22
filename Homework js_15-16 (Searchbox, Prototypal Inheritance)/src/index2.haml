@@ -1,0 +1,37 @@
+!!!
+%html
+  %head
+    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", :rel => "stylesheet"}
+    %link{:href => "css/style2.css", :rel => "stylesheet"}
+  %body
+    .wrapper
+      .top-bar
+      %h1.top-heading#top Testing App
+      %p.instructions Instructions: just press buttons! Test takes 5 questions, beauty.
+      %p.new-question New question
+      .test-view#tost
+        %h3.take-test-button Take the test!
+    .modal.fade{:id => "myModal", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog{:role => "document"}
+        .modal-content
+          .modal-header
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} &#215;
+            %h4.modal-title So, you've finished
+          .modal-body{:id => "modalbody"}
+          .modal-footer
+            %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-primary{:type => "button", :id => "reload"} Do it again!
+    .alert.alert-success.hidden#success
+      %strong Success!
+      Indicates a successful or positive action.
+    .alert.alert-danger.hidden#failure
+      %strong Wrong!
+      Try again and don't be like that!
+
+
+    %script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+    %script(src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js")
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.8.2/js-yaml.min.js"}
+    %script{:src => "js/script2.js"}
+    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"}

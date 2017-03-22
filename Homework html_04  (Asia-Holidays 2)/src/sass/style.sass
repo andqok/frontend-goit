@@ -1,24 +1,29 @@
-$border: 1px solid #128aa7
+$border       : 1px solid #128aa7
+$wrapper_width: 1000px
+$primary_color   : #128aa7
+$default_font_size: 12px
+$menu_width: 30px
 
 *
   margin         : 0
   padding        : 0
   text-decoration: none
+  list-style-type: none
 
 body
-  background-color: #128aa7
+  background-color: 
   font-family     : sans-serif
 
 .wrap
-  width           : 1000px
+  width           : $wrapper_width
   margin          : auto
   box-shadow      : 0 2px 15px 0 rgba(0, 0, 0, 0.7)
   background-color: #fff
 
 .header
   display   : block
-  color     : #128aa7
-  font-size : 12px
+  color     : $primary_color
+  font-size : $default_font_size
   height    : 174px
   background: rgba(18, 137, 167, 1)
   background: -moz-linear-gradient(top, rgba(18, 137, 167, 1) 0%, rgba(18, 137, 167, 1) 17%, rgba(63, 195, 210, 1) 17%, rgba(63, 195, 210, 1) 20%, rgba(63, 195, 210, 1) 27%, rgba(255, 255, 255, 1) 100%)
@@ -41,126 +46,125 @@ section
   .wrap
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.7)
 
+.logo, .trips_asia
+  position  : absolute
+
 .logo
-  position: absolute
-  float: left
-  padding-left: 25px
-  margin-top: 10px
-  height: 177px
+  float        : left
+  padding-left : 25px
+  margin-top   : 10px
+  height       : 177px
 
 .trips_asia
-  position: absolute
-  padding-top: 110px
-  padding-left: 100px
+  padding-top  : 110px
+  padding-left : 100px
+
+.contacts, .countries
+  float        : right
 
 .contacts
-  float: right
-  padding-top: 8px
+  padding-top  : 8px
   padding-right: 32px
-  padding-left: 12px
-  font-size: 12px
-  font-style: normal
-  line-height: 1.5
+  padding-left : 12px
+  font-size    : $default_font_size
+  font-style   : normal
+  line-height  : 1.5
 
   a
     text-decoration: none
-    color: #128aa7
-    display: block
+    color          : $primary_color
+    display        : block
 
 .countries
-  display: flex
-  height: 65px
-  float: right
-  padding-top: 25px
-  margin-right: 18px
-  clear: both
+  display      : flex
+  height       : 65px
+  padding-top  : 25px
+  margin-right : 18px
+  clear        : both
 
 .country_image
-  display: block
-  float: right
-  width: 70px
-  text-align: center
+  width        : 70px
 
   a
-    display: block
-    text-align: center
-    color: #128aa7
+    display    : block
+    text-align : center
+    color      : $primary_color
 
 .beach
   border-top   : $border
   border-bottom: $border
 
 .arrow
-  font-size: 12px
+  font-size    : $default_font_size
 
 .menu
-  display: inline-block
-  width: 1000px
-  height: 30px
-  margin-top: -4px
-  border-top: 1px solid #cacbcb
-  border-bottom: 1px solid #000
+  width           : $wrapper_width
+  margin-top      : -4px
+  border-top      : 1px solid #cacbcb
+  border-bottom   : 1px solid #000
   background-color: #323232
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.75)
+  box-shadow      : 0 3px 3px 0 rgba(0, 0, 0, 0.75)
 
-.menu_item
-  position: relative
-  width: 135px
-  height: 30px
-  text-align: center
-  display: inline-block
+  .menu_item
+    display   : inline-block
+    position  : relative
+    width     : 135px
+    height    : $menu_width
+    text-align: center
 
-  a
-    color: white
-    font-size: 14px
-    line-height: 30px
-    display: block
+    a
+      display    : block
+      color      : white
+      font-size  : 14px
+      line-height: $menu_width
 
-.submenu
-  display: none
-  width: inherit
-  left: 0
-  position: absolute
-  background: #303030
-  box-shadow: 4px 4px 4px hsla(200, 0%, 0%, 0.6)
+    .submenu
+      display   : none
+      position  : absolute
+      width     : inherit
+      left      : 0
+      background: #303030
+      box-shadow: 4px 4px 4px hsla(200, 0%, 0%, 0.6)
 
-  a
-    display: block
+      a
+        display: block
 
 .menu_item:hover .submenu
   display: block
+  z-index: 1
+
+.wrapper-dedushka
+  display: flex
+  flex-direction: column
+
+.wrapper-otetz
+  display: flex
+  flex: 1
+
+.content_center
+  flex: 1
+
+.sidebar_left, .sidebar_right
+  width           : 209px
+  background-color: #edeef0
 
 .sidebar_left
-  width: 209px
-  height: 527px
-  background-color: #edeef0
-//  float: left
-//  overflow: hidden
-
-.sidebar_right
-  width: 209px
-  height: 527px
-  background-color: #edeef0
-//  float: right
-//  overflow: hidden
+  order: -1
 
 .sidebar_item
-  line-height: 1.5
-  margin-left: 15px
-  position: relative
-  color: #424c43
-  margin-top: 4px
-  font-size: 14px
+  position    : relative
+  line-height : 1.5
+  margin-left : 15px
+  color       : #424c43
+  margin-top  : 4px
+  font-size   : 14px
 
-  .info
-    text-align: center
-    padding: 5px
-    color: #424c43
-    margin-top: 4px
+.info
+  text-align  : center
+  line-height : 35px
 
 .copyright
-  margin     : 15px
-  font-family: sans-serif
-  font-family: 'Tahoma'
-  text-align : center
-  color      : #fff
+  margin      : 15px
+  font-family : sans-serif
+  text-align  : center
+  color       : #fff

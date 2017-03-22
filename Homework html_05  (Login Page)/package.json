@@ -10,6 +10,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "browser-sync": "^2.18.8",
+    "cache-require-paths": "^0.3.0",
     "gulp": "^3.9.1",
     "gulp-ruby-haml": "0.0.9",
     "gulp-sass": "^3.1.0"

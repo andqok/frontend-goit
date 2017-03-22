@@ -116,9 +116,8 @@ $(document).ready( function() {
       toDeletion.forEach( function(argument) {
         if ( null === document.getElementById( argument  ) ) { // Isn't it better to write if ( !document.getElementById( argument  ) ) {
           $( '#' + argument ).remove();
-        }
-        }
-      })
+          }
+        })
     }
 
     function appendTemplate() {

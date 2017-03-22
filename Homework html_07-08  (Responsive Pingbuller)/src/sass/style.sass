@@ -38,16 +38,17 @@
 
 .wrapper
   max-width: 960px
-  margin: 0 auto
+  margin-left: auto
+  margin-right: auto
 
 .navbar
   height: 180px
 
 .darkened-stripe
-  height: 400px
   width: 100%
   background-color: rgba(0, 0, 0, 0.2)
   position: absolute
+  padding-bottom: 4em
 
 .carousel-btn-next, .carousel-btn-prev
   position: absolute
@@ -90,7 +91,9 @@
   padding-top: 50px
 
 .navbar-top
-  width: 632px
+  position: relative
+  float: right
+  width: 60%
   display: flex
   justify-content: space-between
   padding-top: 15px
@@ -100,10 +103,9 @@
     height: 23px
 
 .main-article
-  width: 510px
-  height: 250px
+  width: 55%
+  padding-top: 8%
   text-shadow: 1px 1px 2px #4b494c
-  margin-top: 84px
 
 .heading-text
   font: normal 24px "League Gothic", Arial, sans-serif
@@ -115,6 +117,9 @@
 .header-menu-item, .footer-menu-item
   color: #fff
   display: inline
+
+.show-at-768px
+  display: none
 
 .header-menu-item
   font-size: 24px
@@ -159,10 +164,12 @@
 
 .update-item_time
   font-family: "Opensans Light"
+  margin-bottom: 0.5em
 
 .footer__article
   font-size: 16px
   color: #787878
+  padding-top: 1em
 
 .copyright
   font: italic 16px Georgia, sans-serif
@@ -176,52 +183,58 @@
 .about-text
   font-size: 16px
 
+.col
+  position: relative
+  float: left
+
 .about_read-more
   font-size: 18px
+  padding-top: 1em
+  padding-right: 1em
 
 .about-our-company
   height: 344px
   background: #745083
 
 .about-article
-  width: 277px
+  width: 33%
   margin-top: 78px
+  box-sizing: border-box
 
 .about_read-more
   float: right
   line-height: 35px
 
 .testimonials-and-updates
-  height: 488px
   background-color: #f9f9f9
+  padding-top: 6em
 
 .testimonials
-  width: 445px
   height: 333px
-  margin-top: 100px
   background: url("../img/testimonial-man_background.png") no-repeat
   display: inline-block
+  padding-left: 10%
+  padding-right: 18%
+  padding-top: 8%
 
 .recent-updates
-  width: 445px
-  margin-top: 100px
-  display: inline-block
-  padding-left: 30px
-
-.logos
-  height: 120px
-  border-top: 1px solid #e6e6e6
-  outline: 1px solid #fefefe
-  background-color: #f9f9f9
+  padding-left: 2%
+//  padding-right: 10%
+  padding-top: 8%
 
 .recent-comments-new-categories
   background-color: #ececec
   border-top: 1px solid #d8d8d8
+  padding-top: 2em
+  padding-bottom: 2em
 
   .wrapper
     display: flex
     justify-content: space-around
 //    flex-flow: column wrap
+    .col
+      padding-left: 1em
+      padding-right: 2em
 
 .footer__column
   margin-top: 98px
@@ -243,6 +256,11 @@
   p 
     float: right
 
+.icon-background-1, .icon-background-2, .icon-background-3
+  width : 30px
+  height: 30px
+  background: url("../img/items-sprite.png") no-repeat
+
 @media screen and (min-width: 480px) and (max-width: 768px)
   .recent-comments-new-categories
     .wrapper
@@ -252,11 +270,159 @@
   .recent-comments-new-categories
     display: none
 
-.section__about-our-company 
-  height: 344px
+.section__about-our-company
   background: #745083 /* Old browsers */
   background: -moz-linear-gradient(top, #745083 0%, #322539 100%) /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #745083 0, #322539 100%) /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #745083 0, #322539 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#745083', endColorstr='#322539',GradientType=0 ) /* IE6-9 */
   border-top: 1px solid #33253a
+  padding-bottom: 3em
+
+.tovar
+  width: 45%
+
+.iphone-big, .iphone-small
+  position: absolute
+
+.iphone-big
+  margin-top: -2em
+  margin-left: 35%
+  z-index: 3
+
+.iphone-small
+  margin-top: 2em
+  margin-left: 20%
+
+.col-6
+  width: 50%
+
+.ar1, .ar2, .ar3
+  background-repeat: no-repeat
+  background-size: 45px
+  padding-left: 15%
+
+@media screen and (min-width: 320px)
+  .ar1
+    background-image: url(../img/320px/ico-updates-01_320px.jpg)
+
+  .ar2
+    background-image: url(../img/320px/ico-updates-02_320px.jpg)
+
+  .ar3
+    background-image: url(../img/320px/ico-updates-03_320px.jpg)
+
+@media screen and (min-width: 480px)
+  .ar1
+    background-image: url(../img/480px/ico-updates-01_480px.jpg)
+
+  .ar2
+    background-image: url(../img/480px/ico-updates-02_480px.jpg)
+
+  .ar3
+    background-image: url(../img/480px/ico-updates-03_480px.jpg)
+
+@media screen and (min-width: 768px) and (max-width: 960px)
+  .ar1
+    background-image: url(../img/768px/ico-updates-01_768px.jpg)
+
+  .ar2
+    background-image: url(../img/768px/ico-updates-02_768px.jpg)
+
+  .ar3
+    background-image: url(../img/768px/ico-updates-03_768px.jpg)
+
+  .show-at-768px
+    display: visible
+
+  .hide-at-768px
+    display: hidden
+
+@media screen and (max-width: 960px)
+  .icon-background-1, .icon-background-2, .icon-background-3
+    background-position: 0 0
+
+@media screen and (min-width: 960px)
+  .ar1
+    background-image: url(../img/960px/ico-updates-01_960px.jpg)
+
+  .ar2
+    background-image: url(../img/960px/ico-updates-02_960px.jpg)
+
+  .ar3
+    background-image: url(../img/960px/ico-updates-03_960px.jpg)
+
+  .icon-background-1
+    background-position: 0 0
+
+  .icon-background-2
+    background-position: 0px -60px
+
+  .icon-background-3
+    background-position: 0px -30px
+
+.testimonials-pingbuller
+  padding-top: 1.2em
+  padding-bottom: 0.5em
+
+.logos
+  height: 120px
+  border-top: 1px solid #e6e6e6
+  outline: 1px solid #fefefe
+  background-color: #f9f9f9
+  padding-top: 1.5em
+  .wrapper
+    box-sizing: border-box
+    display: flex
+    justify-content: space-between
+
+.logo-1, .logo-2, .logo-3, .logo-4, .logo-5, .logo-6
+  width: 20%
+  display: inline-block
+
+.logo-1
+  width: 69px
+  height: 64px
+  background: url("../img/logos-sprite.png") no-repeat 0 0
+
+.logo-2
+  width: 72px
+  height: 64px
+  background: url("../img/logos-sprite.png") no-repeat -124px 0
+
+.logo-3
+  width: 65px
+  height: 65px
+  background: url("../img/logos-sprite.png") no-repeat -250px 0
+
+.logo-4
+  width: 50px
+  height: 63px
+  background: url("../img/logos-sprite.png") no-repeat -380px 0
+
+.logo-5
+  width: 103px
+  height: 21px
+  background: url("../img/logos-sprite.png") no-repeat -488px -22px
+
+.logo-6
+  width: 78px
+  height: 61px
+  background: url("../img/logos-sprite.png") no-repeat -647px -2px
+
+.col-4
+  width: 33%
+  padding-left: 1em
+  padding-right: 1em
+
+.icon, .article-content
+  display: inline-block
+
+.icon
+  width: 18%
+  height: 100%
+  height: 150px
+
+.article-content
+  width: 72%
+

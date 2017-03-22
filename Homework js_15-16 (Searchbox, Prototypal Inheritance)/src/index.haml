@@ -6,12 +6,15 @@
   %title Document
 %body
   .wrapper
-    .divka
-      %div.red
-        %span Red
-      %div.green
-        %span Green
-      %div.blue
-        %span Blue
+    .search-area
+      %a{:href => "index2.html", :class => "gonext"} Go next =>
+      %h1 Woogle
+      %form{:method => "get", :id => "search"}
+        %input{:type => "text", :class => "searchbox"}
+        %button{:type => "submit", :id => "buttonka"} Submit
+    .results
   %script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+  %link{:href => "https://code.jquery.com/ui/1.12.1/themes/vader/jquery-ui.css", :rel=> "stylesheet"}
+  %script{:crossorigin => "anonymous", :integrity => "sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=", :src => "https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"}
+
   %script{:src => "js/script.js"}

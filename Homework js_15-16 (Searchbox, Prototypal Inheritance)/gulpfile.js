@@ -12,15 +12,16 @@ const paths       = {
 }
 
 gulp.task('haml', function () {
-  gulp.src('src/index.haml')
-  .pipe(haml())
+  gulp.src('src/*.haml')
+  .pipe(haml()
+  .on('error', function(e) { console.log(e.message); }))
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest('dist'))
   .pipe(reload({stream:true}));
 });
 
 gulp.task('sass', function() {
-  gulp.src('src/sass/style.sass')
+  gulp.src('src/sass/*.sass')
   .pipe(sass()
   .on('error', sass.logError))
   .pipe(cleanCSS())
@@ -29,7 +30,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('minify', function () {
-  gulp.src('src/js/*.js')
+  gulp.src('src/js/script.js')
     .pipe(babili({
       mangle: {
         keepClassNames: true
@@ -50,7 +51,7 @@ gulp.task('browserSync', function() {
   });
 });
 
-gulp.task('default', ['haml', 'sass', 'minify', 'browserSync']);
+gulp.task('default', ['haml', 'sass', 'browserSync']);
 gulp.watch('src/index.haml', ['haml']);
 gulp.watch('src/sass/style.sass', ['sass']);
-gulp.watch('src/js/*.js', ['minify']);
+//gulp.watch('src/js/*.js', ['minify']);

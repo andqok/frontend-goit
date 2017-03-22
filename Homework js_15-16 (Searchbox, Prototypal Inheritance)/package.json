@@ -10,6 +10,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "browser-sync": "^2.18.8",
+    "cache-require-paths": "^0.3.0",
     "grunt": "^1.0.1",
     "gulp": "^3.9.1",
     "gulp-babili": "0.0.2",
